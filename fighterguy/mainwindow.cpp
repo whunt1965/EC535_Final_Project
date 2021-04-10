@@ -5,10 +5,21 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
+
     ui->setupUi(this);
 
-    QPixmap pix(":/assets/Scene.png");
-    ui->background->setPixmap(pix);
+
+    ui->stackedWidget->setCurrentIndex(0);
+
+
+  //  QPixmap pix(":/assets/beach.png");
+   // ui->stackedWidget->Qwidget->menu->background_2->setPixmap(pix);
+    //   ui->widget->menu->background->setPixmap(pix);
+
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -16,3 +27,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+
+void MainWindow::on_quitButton_clicked()
+{
+    QCoreApplication::quit();
+}
+
+void MainWindow::on_newGameButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}

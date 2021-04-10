@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>assets/Scene.png</file>
+        <file>assets/beach.png</file>
     </qresource>
 </RCC>
