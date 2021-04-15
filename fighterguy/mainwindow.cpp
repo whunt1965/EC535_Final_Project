@@ -17,24 +17,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-
-
-
-
     QGraphicsScene* scene = new QGraphicsScene();
     ui->graphicsView->setScene(scene);
 
     Fighter* fighter = new Fighter(1, "Guy");
 
-    QGraphicsRectItem* rect = new QGraphicsRectItem();
-    rect->setRect(0,0,200,200);
-    scene->addItem(rect);
 
-
-
-
-
-    qDebug() << "Main window!";
 
 }
 
@@ -56,15 +44,29 @@ void MainWindow::on_newGameButton_clicked()
 }
 
 
-
 void MainWindow::on_FightButton_clicked()
 {
+
+    if(characterSelect ==0){
+    QPixmap mypix (":/assets/lifegaurd.png");
+    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
+    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
+       }
+    else{
+       QPixmap mypix (":/assets/foodtruckJim.png");
+       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
+
+       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
+    }
+
+
     ui->stackedWidget->setCurrentIndex(2);
 }
 
 void MainWindow::on_leftarrow_clicked()
 {
     characterSelect--;
+    characterSelect =abs(characterSelect);
     characterSelect = characterSelect % 2;
 
     ui->playerOneSelect->setText(QString::number(characterSelect));
@@ -90,8 +92,4 @@ void MainWindow::changeCharacterImage(){
         ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
 
     }
-
-
-
-
 }
