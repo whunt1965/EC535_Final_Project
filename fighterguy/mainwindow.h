@@ -21,6 +21,15 @@ private slots:
 
     void on_newGameButton_clicked();
 
+
+    void on_FightButton_clicked();
+
+    void on_leftarrow_clicked();
+
+    void on_rightArrow_clicked();
+
+    void changeCharacterImage();
+
 private:
     Ui::MainWindow *ui;
 };

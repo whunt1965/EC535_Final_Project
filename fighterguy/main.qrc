@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>assets/Scene.png</file>
         <file>assets/beach.png</file>
+        <file>assets/lifegaurd.png</file>
     </qresource>
 </RCC>

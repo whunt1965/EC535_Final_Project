@@ -25,6 +25,9 @@
     </property>
     <widget class="QWidget" name="menu">
      <widget class="QPushButton" name="newGameButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -70,18 +73,114 @@
      <zorder>newGameButton</zorder>
      <zorder>quitButton</zorder>
     </widget>
-    <widget class="QWidget" name="page_2">
-     <widget class="QLabel" name="label">
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="background_2">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>280</y>
-        <width>60</width>
-        <height>16</height>
+        <x>0</x>
+        <y>0</y>
+        <width>801</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/assets/beach.png);</string>
+      </property>
+      <property name="lineWidth">
+       <number>8</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="FightButton">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>530</y>
+        <width>181</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
-       <string>Page2</string>
+       <string>Fight</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rightArrow">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>440</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rightArrow</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="leftarrow">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>440</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>leftArrow</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="playerOneSelect">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>420</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>8</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="characterImg">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>50</y>
+        <width>251</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/assets/lifegaurd.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>-10</y>
+        <width>811</width>
+        <height>611</height>
+       </rect>
       </property>
      </widget>
     </widget>
