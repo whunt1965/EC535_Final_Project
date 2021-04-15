@@ -65,7 +65,7 @@ void MainWindow::on_FightButton_clicked()
 void MainWindow::on_leftarrow_clicked()
 {
     characterSelect--;
-    characterSelect = abs(characterSelect) % 4;
+    characterSelect = characterSelect % 2;
 
     ui->playerOneSelect->setText(QString::number(characterSelect));
     changeCharacterImage();
@@ -75,28 +75,20 @@ void MainWindow::on_leftarrow_clicked()
 void MainWindow::on_rightArrow_clicked()
 {
     characterSelect++;
-    characterSelect = abs(characterSelect) %4;
+    characterSelect = characterSelect %2;
     ui->playerOneSelect->setText(QString::number(characterSelect));
     changeCharacterImage();
 }
 
 void MainWindow::changeCharacterImage(){
 
-    if(characterSelect ==1){
-
-     //   QPixmap pix(":/assets/lifegaurd.png");
-     //   QPixmap newPixmap = pix.scaled(QSize(251,351),  Qt::KeepAspectRatio);
+    if(characterSelect ==0){
         ui->characterImg->setStyleSheet("image:url(:/assets/lifegaurd.png);");
-     //   ui->characterImg->setPixmap(newPixmap);
-        //ui->characterImg->setStyleSheet("image: url(:/assets/beach.png)");
     }
 
-    else if(characterSelect ==2){
+    else if(characterSelect ==1){
+        ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
 
-     //   QPixmap pix(":/assets/Scene.png");
-        ui->characterImg->setStyleSheet("image:url(:/assets/Scene.png);");
-    //    ui->characterImg->setPixmap(pix);
-        //ui->characterImg->setStyleSheet("image: url(:/assets/beach.png)");
     }
 
 
