@@ -1,7 +1,7 @@
-#include "controlller.h"
+#include "controller.h"
 
 
-Controlller::Controlller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
+Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
     : scene(scene),
       Player1(P1),
       Player2(P2){
@@ -10,21 +10,21 @@ Controlller::Controlller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
 }
 
 //key press event handler
-void Controlller::handleKeyPressEvent(QKeyEvent *event){
+void Controller::handleKeyPressEvent(QKeyEvent *event){
 
 
     switch(event->key()){
 
         /********* Player 1 Keys ********/
         case Qt::Key_A:{ //Player 1 move left - A key - ensure don't move beyond 0 coord
-            if(Player1->pos().x() > 0){
+            if(Player1->pos().x() -100 > 0){
                 Player1->moveLeft();
             }
             break;
         }
 
         case Qt::Key_D:{//Player1 move right - D key -- cannot move past opponent --need to tweak
-            if(Player1->pos().x() + 10 >= Player1->getOpponent()->pos().x()){
+            if(Player1->pos().x() + 210 <= Player1->getOpponent()->pos().x()){
                 Player1->moveRight();
             }
             break;
@@ -52,14 +52,14 @@ void Controlller::handleKeyPressEvent(QKeyEvent *event){
 
         /********* Player 2 Keys ********/
         case Qt::Key_J:{ //Player 2 move left - J key - ensure don't move beyond opponent
-            if(Player2->pos().x() >= Player2->getOpponent()->pos().x() + 10){
-                Player1->moveLeft();
+            if(Player2->pos().x() >= Player2->getOpponent()->pos().x() + 210){
+                Player2->moveLeft();
             }
             break;
         }
 
         case Qt::Key_L:{//Player2 move right - L key -- cannot move out of scene --need to tweak
-            if(Player2->pos().x() + 10 < Player2->scene()->width()){
+            if(Player2->pos().x() + 100 < 800){
                 Player2->moveRight();
             }
             break;
@@ -92,7 +92,7 @@ void Controlller::handleKeyPressEvent(QKeyEvent *event){
 }
 
 //key release event handler
-void Controlller::handleKeyReleaseEvent(QKeyEvent *event){
+void Controller::handleKeyReleaseEvent(QKeyEvent *event){
 
     switch(event->key()){
 
@@ -113,7 +113,7 @@ void Controlller::handleKeyReleaseEvent(QKeyEvent *event){
 }
 
 //event filter
-bool Controlller::eventFilter(QObject *object, QEvent *event){
+bool Controller::eventFilter(QObject *object, QEvent *event){
 
     if (event->type() == QEvent::KeyPress) {
         handleKeyPressEvent((QKeyEvent *)event);

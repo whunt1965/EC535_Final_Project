@@ -5,11 +5,11 @@
 #include <QObject>
 #include "fighter.h"
 
-class Controlller: public QObject{
+class Controller: public QObject{
       Q_OBJECT
 public:
 
-    Controlller(QGraphicsScene* scene, Fighter* P1, Fighter* P2);
+    Controller(QGraphicsScene* scene, Fighter* P1, Fighter* P2);
 
     void handleKeyPressEvent(QKeyEvent *event);
 

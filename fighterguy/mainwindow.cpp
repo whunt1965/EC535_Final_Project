@@ -64,7 +64,7 @@ void MainWindow::on_FightButton_clicked()
 //       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
     }
 
-    Game* game = new Game(ui->graphicsView->scene(), mypix, mypix);
+    Game* game = new Game(ui->graphicsView, mypix, mypix);
 
 
     ui->stackedWidget->setCurrentIndex(2);

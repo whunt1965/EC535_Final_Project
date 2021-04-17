@@ -9,7 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    controlller.cpp \
+    controller.cpp \
     fighter.cpp \
     game.cpp \
     main.cpp \
@@ -19,7 +19,7 @@ SOURCES += \
     score.cpp
 
 HEADERS += \
-    controlller.h \
+    controller.h \
     fighter.h \
     game.h \
     mainwindow.h \

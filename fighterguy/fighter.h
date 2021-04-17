@@ -6,7 +6,7 @@
 #include <QString>
 
 /**
- * @brief The Fighter class - A simple asbtract base class for fighter objects in the game
+ * @brief The Fighter class
  */
 class Fighter: public QGraphicsPixmapItem
 {
@@ -25,18 +25,6 @@ public:
 
     /*Destructor*/
     ~Fighter(){};
-
-//    /**
-//     * @brief keyPressEvent - handler for keypress event; declare virtual here to make abstract base class
-//     * @param event
-//     */
-//    virtual void keyPressEvent(QKeyEvent *event) = 0;
-
-//    /**
-//     * @brief keyreleaseEvent - handler for key relase event; declare virtual here to make abstract base class
-//     * @param event
-//     */
-//    void keyReleaseEvent(QKeyEvent *event);
 
     /**
      * @brief setOpponent - sets the fighter's opponent

@@ -10,6 +10,7 @@
 #include "player1.h"
 #include "player2.h"
 #include "score.h"
+#include "controller.h"
 
 class Game: public QGraphicsView{
 
@@ -20,16 +21,18 @@ public:
      * @param player1 - Player1 base image
      * @param player2 - Player2 base image
      */
-    Game(QGraphicsScene* scene, QPixmap player1, QPixmap player2);
+    Game(QGraphicsView* view, QPixmap player1, QPixmap player2);
 
     //Destructor for Game
     ~Game();
 
-    QGraphicsScene* scene;
-    Player1* player1;
-    Player2* player2;
+
+private:
+    Fighter* player1;
+    Fighter* player2;
     Score* p1Score;
     Score* p2Score;
+    Controller* controller;
 
 };
 
