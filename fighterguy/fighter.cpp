@@ -1,4 +1,5 @@
 #include "fighter.h"
+#include<QtMath>
 
 //default constructor
 //need to add a location...
@@ -6,7 +7,8 @@ Fighter::Fighter()
     : id(0),
       name("default"),
       health(20),
-      blocking(false){}
+      blocking(false),
+      opponent(NULL){}
 
 //parameterized constructor
 //need to add a location...
@@ -14,7 +16,13 @@ Fighter::Fighter(int in_id, std::string fname)
     : id(in_id),
       name(fname),
       health(20),
-      blocking(false){}
+      blocking(false),
+      opponent(NULL){}
+
+//sets a fighter's opponent
+void Fighter::setOpponent(Fighter* opponent){
+    this->opponent = opponent;
+}
 
 //indicates if a fighter is alive
 bool Fighter::isAlive(){
@@ -36,12 +44,16 @@ void Fighter::unblock(){
     this->blocking = false;
 }
 
-//move a fighter in x direction
-void Fighter::move(){
-
-    //TO-DO
-
+//move a fighter in -x direction
+void Fighter::moveLeft(){
+    setPos(x()-10, y());
 }
+
+//move a fighter in +x direction
+void Fighter::moveRight(){
+    setPos(x()+10, y());
+}
+
 
 //make fighter jump 1 unit (up) in y direction
 void Fighter::jump(){
@@ -51,24 +63,28 @@ void Fighter::jump(){
 }
 
 //Determines if an opponent is in range for an attack
-bool Fighter::inRange(Fighter* opponent){
-
+bool Fighter::opponentInRange(){
     //TO-DO
-
-    return true;
+    qreal xdist = qFabs(this->pos().x() - this->opponent->pos().x());
+    qreal ydist = qFabs(this->pos().y() - this->opponent->pos().y());
+    if(xdist <= 10 && ydist == 0){
+        return true;
+    }
+    return false;
 }
 
 //Kick an opponent
-void Fighter::kick(Fighter* opponent){
-
-    //TO-DO
+void Fighter::kick(){
+    if (this->opponentInRange()){
+        this->opponent->takeKick();
+    }
 }
 
 //Punch an opponent
-void Fighter::punch(Fighter* opponent){
-
-    //TO-DO
-
+void Fighter::punch(){
+    if (this->opponentInRange()){
+        this->opponent->takePunch();
+    }
 }
 
 //indicates if a fighter is blocking

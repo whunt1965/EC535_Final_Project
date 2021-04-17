@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QLabel>
 #include "fighter.h"
+#include "player1.h"
 
 int characterSelect = 0;
 
@@ -20,7 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     QGraphicsScene* scene = new QGraphicsScene();
     ui->graphicsView->setScene(scene);
 
-    Fighter* fighter = new Fighter(1, "Guy");
+//    QPixmap mypix (":/assets/lifegaurd.png");
+//    Fighter* fighter = new Player1(1, "Guy", mypix);
+//    fighter->setOpponent(fighter);
 
 
 

@@ -2,11 +2,13 @@
 #define FIGHTER_H
 
 #include<string>
+#include<QGraphicsPixmapItem>
+#include<QKeyEvent>
 
 /**
- * @brief The Fighter class - A simple class for fighter objects in the game
+ * @brief The Fighter class - A simple asbtract base class for fighter objects in the game
  */
-class Fighter
+class Fighter: public QGraphicsPixmapItem
 {
 public:
 
@@ -22,6 +24,24 @@ public:
 
     /*Destructor*/
     ~Fighter();
+
+    /**
+     * @brief keyPressEvent - handler for keypress event; declare virtual here to make abstract base class
+     * @param event
+     */
+    virtual void keyPressEvent(QKeyEvent *event) = 0;
+
+    /**
+     * @brief keyreleaseEvent - handler for key relase event; declare virtual here to make abstract base class
+     * @param event
+     */
+    virtual void keyReleaseEvent(QKeyEvent *event) = 0;
+
+    /**
+     * @brief setOpponent - sets the fighter's opponent
+     * @param opponent - the opposing fighter
+     */
+    void setOpponent(Fighter* opponent);
 
     /**
      * @brief isAlive
@@ -46,9 +66,14 @@ public:
     void unblock();
 
     /**
-     * @brief move - moves a fighter 1 unit in the positive or negative x direction
+     * @brief moveLeft - moves a fighter 1 unit in the positive or negative x
      */
-    void move();
+    void moveLeft();
+
+    /**
+     * @brief moveRight - moves a fighter 1 unit in the positive or negative x
+     */
+    void moveRight();
 
     /**
      * @brief jump - causes a fighter to jump 1 unit in the positive y direction
@@ -57,22 +82,21 @@ public:
 
     /**
      * @brief inRange - Determines if an opponent is in range for an attack
-     * @param opponent - a pointer to the other fighter to be attacked
      * @return True if the opponent is in range and false otherwise
      */
-    bool inRange(Fighter* opponent);
+    bool opponentInRange();
 
     /**
      * @brief kick - executes a kick attack against an opponent is the opponent is in range
      * @param opponent - a pointer to the other fighter to be kicked
      */
-    void kick(Fighter* opponent);
+    void kick();
 
     /**
      * @brief punch- executes a punch attack against an opponent is the opponent is in range
      * @param opponent - a pointer to the other fighter to be punched
      */
-    void punch(Fighter* opponent);
+    void punch();
 
     /**
      * @brief isBlocking - indicates whether a fighter is blocking
@@ -90,11 +114,14 @@ public:
      */
     void takePunch();
 
+protected:
+    Fighter* opponent;//Fighter's opponent
+
 private:
     int id;//Fighter's ID
     std::string name;//Fighter's name
     int health;//a fighter's health - default is 20
-    bool blocking;//boolean
+    bool blocking;//boolean indeictaing if the fighter is blocking
 
     //also need some sort of position...
 

@@ -10,12 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     fighter.cpp \
+    game.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    player1.cpp \
+    player2.cpp
 
 HEADERS += \
     fighter.h \
-    mainwindow.h
+    game.h \
+    mainwindow.h \
+    player1.h \
+    player2.h
 
 FORMS += \
     mainwindow.ui
