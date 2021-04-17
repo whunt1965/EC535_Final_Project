@@ -19,8 +19,9 @@ public:
      * @brief Constructor for a fighter
      * @param in_id - The fighter's id
      * @param fname - The fighter's name
+     * @param pic -- An Array of pictures for fighter animations
      */
-    explicit Fighter(int in_id, QString fname);//need to add a position...
+    explicit Fighter(int in_id, QString fname, QPixmap& pic);
 
     /*Destructor*/
     ~Fighter(){};
@@ -113,6 +114,12 @@ public:
      * @brief takePunch if this fighter is blocking, health remains unchanged. Else, health decrements by 1
      */
     void takePunch();
+
+    /**
+     * @brief getOpponent - returns a pointer to the Fighter's opponent
+     * @return a pointer to this fighter's opponent
+     */
+    Fighter* getOpponent();
 
 protected:
     Fighter* opponent = nullptr;//Fighter's opponent

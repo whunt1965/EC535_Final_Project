@@ -11,11 +11,14 @@ Fighter::Fighter()
 
 //parameterized constructor
 //need to add a location...
-Fighter::Fighter(int in_id, QString fname)
+Fighter::Fighter(int in_id, QString fname, QPixmap& pic)
     : id(in_id),
       name(fname),
       health(20),
-      blocking(false){}
+      blocking(false){
+
+        setPixmap(pic.scaled(200,400,Qt::KeepAspectRatio));
+}
 
 //sets a fighter's opponent
 void Fighter::setOpponent(Fighter* opponent){
@@ -100,4 +103,9 @@ void Fighter::takePunch(){
     if(!this->isBlocking()){
         this->health-=1;
     }
+}
+
+//getter for opponent pointer
+Fighter *Fighter::getOpponent(){
+    return this->opponent;
 }
