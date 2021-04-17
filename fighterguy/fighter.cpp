@@ -7,17 +7,15 @@ Fighter::Fighter()
     : id(0),
       name("default"),
       health(20),
-      blocking(false),
-      opponent(NULL){}
+      blocking(false){}
 
 //parameterized constructor
 //need to add a location...
-Fighter::Fighter(int in_id, std::string fname)
+Fighter::Fighter(int in_id, QString fname)
     : id(in_id),
       name(fname),
       health(20),
-      blocking(false),
-      opponent(NULL){}
+      blocking(false){}
 
 //sets a fighter's opponent
 void Fighter::setOpponent(Fighter* opponent){

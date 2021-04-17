@@ -14,14 +14,16 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     player1.cpp \
-    player2.cpp
+    player2.cpp \
+    score.cpp
 
 HEADERS += \
     fighter.h \
     game.h \
     mainwindow.h \
     player1.h \
-    player2.h
+    player2.h \
+    score.h
 
 FORMS += \
     mainwindow.ui

@@ -1,9 +1,9 @@
 #ifndef FIGHTER_H
 #define FIGHTER_H
 
-#include<string>
 #include<QGraphicsPixmapItem>
 #include<QKeyEvent>
+#include <QString>
 
 /**
  * @brief The Fighter class - A simple asbtract base class for fighter objects in the game
@@ -20,7 +20,7 @@ public:
      * @param in_id - The fighter's id
      * @param fname - The fighter's name
      */
-    explicit Fighter(int in_id, std::string fname);//need to add a position...
+    explicit Fighter(int in_id, QString fname);//need to add a position...
 
     /*Destructor*/
     ~Fighter();
@@ -115,11 +115,11 @@ public:
     void takePunch();
 
 protected:
-    Fighter* opponent;//Fighter's opponent
+    Fighter* opponent = nullptr;//Fighter's opponent
 
 private:
     int id;//Fighter's ID
-    std::string name;//Fighter's name
+    QString name;//Fighter's name
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking
 

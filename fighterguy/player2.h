@@ -8,7 +8,7 @@ class Player2: public Fighter
 public:
     Player2();
 
-    explicit Player2(int in_id, std::string fname, QPixmap pic);
+    explicit Player2(int in_id, QString fname, QPixmap pic);
 
     void keyPressEvent(QKeyEvent *event);
 
