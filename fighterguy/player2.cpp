@@ -4,8 +4,7 @@
 
 //constructor
 Player2::Player2(int in_id, QString fname, QPixmap pic)
-    :Fighter(in_id, fname){
-    setPixmap(pic);
+    :Fighter(in_id, fname, pic){
 
 }
 
