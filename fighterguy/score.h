@@ -12,7 +12,7 @@ public:
      * @brief Score - Constructor for score
      * @param pname - Player name tied to score
      */
-    Score(QString pname);
+    Score(QString pname, int score);
 
     /**
      * @brief setScore - Setter for score

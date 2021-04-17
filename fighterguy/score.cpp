@@ -3,8 +3,8 @@
 
 
 //Score constructor
-Score::Score(QString pname)
-    :score(0),
+Score::Score(QString pname, int score)
+    :score(score),
      name(pname){
 
     //Create Text Item

@@ -68,7 +68,7 @@ bool Fighter::opponentInRange(){
     //TO-DO
     qreal xdist = qFabs(this->pos().x() - this->opponent->pos().x());
     qreal ydist = qFabs(this->pos().y() - this->opponent->pos().y());
-    if(xdist <= 10 && ydist == 0){
+    if(xdist <= 200 && ydist == 0){
         return true;
     }
     return false;

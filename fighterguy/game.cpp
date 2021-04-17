@@ -1,9 +1,4 @@
 #include "game.h"
-#include <QBrush>
-#include <QImage>
-
-
-
 
 Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
 
@@ -25,7 +20,6 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
 //    player2->setFlag(QGraphicsItem::ItemIsFocusable);
 //    player2->setFocus();
 
-    this->controller = new Controller(scene, player1, player2);
 
 
 
@@ -38,10 +32,15 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
     scene->addItem(player2);
 
     //add scores here
+    this->p1Score = new Score("Player1", player1->getHealth());
+    p1Score->setPos(100, 900);
+    this->p2Score = new Score("Player2", player2->getHealth());
+    p2Score->setPos(700, 900);
+    scene->addItem(p1Score);
+    scene->addItem(p2Score);
 
 
-
-
+    this->controller = new Controller(scene, player1, player2, p1Score, p2Score);
 }
 
 Game::~Game(){

@@ -1,10 +1,12 @@
 #include "controller.h"
 
 
-Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
+Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2, Score *P1S, Score *P2S)
     : scene(scene),
       Player1(P1),
-      Player2(P2){
+      Player2(P2),
+      P1Score(P1S),
+      P2Score(P2S){
         scene->installEventFilter(this);
 
 }
@@ -88,6 +90,7 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
         default: break;
 
   }
+    update();
 
 }
 
@@ -109,7 +112,15 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
             break;
         }
         default: break;
-  }
+    }
+    update();
+}
+
+//update scores
+void Controller::update(){
+    P1Score->setScore(Player1->getHealth());
+    P2Score->setScore(Player2->getHealth());
+
 }
 
 //event filter
