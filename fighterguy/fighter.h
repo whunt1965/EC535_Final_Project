@@ -23,19 +23,19 @@ public:
     explicit Fighter(int in_id, QString fname);//need to add a position...
 
     /*Destructor*/
-    ~Fighter();
+    ~Fighter(){};
 
-    /**
-     * @brief keyPressEvent - handler for keypress event; declare virtual here to make abstract base class
-     * @param event
-     */
-    virtual void keyPressEvent(QKeyEvent *event) = 0;
+//    /**
+//     * @brief keyPressEvent - handler for keypress event; declare virtual here to make abstract base class
+//     * @param event
+//     */
+//    virtual void keyPressEvent(QKeyEvent *event) = 0;
 
-    /**
-     * @brief keyreleaseEvent - handler for key relase event; declare virtual here to make abstract base class
-     * @param event
-     */
-    virtual void keyReleaseEvent(QKeyEvent *event) = 0;
+//    /**
+//     * @brief keyreleaseEvent - handler for key relase event; declare virtual here to make abstract base class
+//     * @param event
+//     */
+//    void keyReleaseEvent(QKeyEvent *event);
 
     /**
      * @brief setOpponent - sets the fighter's opponent

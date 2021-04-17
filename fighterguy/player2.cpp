@@ -3,7 +3,7 @@
 
 
 //constructor
-Player2::Player2(int in_id, std::string fname, QPixmap pic)
+Player2::Player2(int in_id, QString fname, QPixmap pic)
     :Fighter(in_id, fname){
     setPixmap(pic);
 

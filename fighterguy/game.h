@@ -20,7 +20,7 @@ public:
      * @param player1 - Player1 base image
      * @param player2 - Player2 base image
      */
-    Game(QGraphicsPixmapItem player1, QGraphicsPixmapItem player2);
+    Game(QGraphicsScene* scene, QPixmap player1, QPixmap player2);
 
     //Destructor for Game
     ~Game();

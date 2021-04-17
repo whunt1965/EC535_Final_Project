@@ -6,6 +6,7 @@
 #include <QLabel>
 #include "fighter.h"
 #include "player1.h"
+#include "game.h"
 
 int characterSelect = 0;
 
@@ -49,18 +50,21 @@ void MainWindow::on_newGameButton_clicked()
 
 void MainWindow::on_FightButton_clicked()
 {
+    QPixmap mypix (":/assets/lifegaurd.png");
 
     if(characterSelect ==0){
     QPixmap mypix (":/assets/lifegaurd.png");
-    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
-    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
+//    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
+//    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
        }
     else{
        QPixmap mypix (":/assets/foodtruckJim.png");
-       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
+//       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
 
-       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
+//       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
     }
+
+    Game* game = new Game(ui->graphicsView->scene(), mypix, mypix);
 
 
     ui->stackedWidget->setCurrentIndex(2);

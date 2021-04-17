@@ -1,7 +1,7 @@
 #include "player1.h"
 
 //Player 1 constructor
-Player1::Player1(int in_id, std::string fname, QPixmap pic)
+Player1::Player1(int in_id, QString fname, QPixmap pic)
     :Fighter(in_id, fname){
     setPixmap(pic);
 
