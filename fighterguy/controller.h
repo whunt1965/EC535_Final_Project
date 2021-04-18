@@ -18,6 +18,8 @@ public:
 
     void update();
 
+    void endGame();
+
     bool eventFilter(QObject *object, QEvent *event);
 
 private:

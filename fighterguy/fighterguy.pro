@@ -14,8 +14,6 @@ SOURCES += \
     game.cpp \
     main.cpp \
     mainwindow.cpp \
-    player1.cpp \
-    player2.cpp \
     score.cpp
 
 HEADERS += \
@@ -23,8 +21,6 @@ HEADERS += \
     fighter.h \
     game.h \
     mainwindow.h \
-    player1.h \
-    player2.h \
     score.h
 
 FORMS += \
