@@ -10,7 +10,7 @@ class Controller: public QObject{
       Q_OBJECT
 public:
 
-    Controller(QGraphicsScene* scene, Fighter* P1, Fighter* P2, Score *P1S, Score *P2Se);
+    Controller(QGraphicsScene* scene, Fighter* P1, Fighter* P2, Score *P1S, Score *P2S);
 
     void handleKeyPressEvent(QKeyEvent *event);
 
