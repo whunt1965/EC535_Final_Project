@@ -7,8 +7,6 @@
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include "fighter.h"
-#include "player1.h"
-#include "player2.h"
 #include "score.h"
 #include "controller.h"
 

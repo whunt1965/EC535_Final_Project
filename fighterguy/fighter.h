@@ -109,14 +109,16 @@ public:
      */
     Fighter* getOpponent();
 
-protected:
-    Fighter* opponent = nullptr;//Fighter's opponent
+    //getter for fighter name
+    QString getName();
+
 
 private:
     int id;//Fighter's ID
     QString name;//Fighter's name
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking
+    Fighter* opponent = nullptr;//Fighter's opponent
 
     //also need some sort of position...
 

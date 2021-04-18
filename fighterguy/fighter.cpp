@@ -109,3 +109,7 @@ void Fighter::takePunch(){
 Fighter *Fighter::getOpponent(){
     return this->opponent;
 }
+
+QString Fighter::getName(){
+    return name;
+}

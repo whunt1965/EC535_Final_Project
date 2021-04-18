@@ -5,8 +5,6 @@
 #include <QDebug>
 #include <QLabel>
 #include "fighter.h"
-#include "player1.h"
-#include "game.h"
 
 int characterSelect = 0;
 
@@ -33,6 +31,12 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete game;
+}
+
+void MainWindow::reset(){
+    delete game;
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 
@@ -64,7 +68,7 @@ void MainWindow::on_FightButton_clicked()
 //       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
     }
 
-    Game* game = new Game(ui->graphicsView, mypix, mypix);
+    this->game = new Game(ui->graphicsView, mypix, mypix);
 
 
     ui->stackedWidget->setCurrentIndex(2);
