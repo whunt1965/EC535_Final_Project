@@ -37,6 +37,12 @@ private slots:
 
     void on_mainMenuBtn_clicked();
 
+    void on_leftarrow_2_clicked();
+
+    void on_rightArrow_2_clicked();
+
+    void changeCharacterImageTwo();
+
 private:
     Ui::MainWindow *ui;
     Game* game = nullptr;

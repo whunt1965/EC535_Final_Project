@@ -7,6 +7,7 @@
 #include "fighter.h"
 
 int characterSelect = 0;
+int characterSelectTwo = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -85,7 +86,7 @@ void MainWindow::on_leftarrow_clicked()
     characterSelect =abs(characterSelect);
     characterSelect = characterSelect % 2;
 
-    ui->playerOneSelect->setText(QString::number(characterSelect));
+
     changeCharacterImage();
 
 }
@@ -94,7 +95,6 @@ void MainWindow::on_rightArrow_clicked()
 {
     characterSelect++;
     characterSelect = characterSelect %2;
-    ui->playerOneSelect->setText(QString::number(characterSelect));
     changeCharacterImage();
 }
 
@@ -102,10 +102,12 @@ void MainWindow::changeCharacterImage(){
 
     if(characterSelect ==0){
         ui->characterImg->setStyleSheet("image:url(:/assets/lifegaurd.png);");
+         ui->playerOneSelect->setText(QString("LifeGuard Lenny"));
     }
 
     else if(characterSelect ==1){
         ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
+        ui->playerOneSelect->setText(QString("Food Truck Jim"));
 
     }
 }
@@ -123,4 +125,37 @@ void MainWindow::on_exitBtn_clicked()
 void MainWindow::on_mainMenuBtn_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_leftarrow_2_clicked()
+{
+    characterSelectTwo--;
+    characterSelectTwo =abs(characterSelectTwo);
+    characterSelectTwo = characterSelectTwo % 2;
+
+    changeCharacterImageTwo();
+
+}
+
+void MainWindow::on_rightArrow_2_clicked()
+{
+    characterSelectTwo++;
+    characterSelectTwo = characterSelectTwo %2;
+
+    changeCharacterImageTwo();
+
+}
+
+void MainWindow::changeCharacterImageTwo(){
+
+    if(characterSelectTwo ==0){
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/lifegaurd.png);");
+        ui->playerTwoSelect->setText(QString("LifeGuard Lenny"));
+    }
+
+    else if(characterSelectTwo ==1){
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
+        ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
+
+    }
 }
