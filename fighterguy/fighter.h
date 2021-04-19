@@ -7,6 +7,7 @@
 #include  <QGraphicsItemAnimation>
 #include <QTimeLine>
 #include <QDebug>
+#include <QVector>
 
 /**
  * @brief The Fighter class
@@ -21,9 +22,9 @@ public:
     /**
      * @brief Constructor for a fighter
      * @param fname - The fighter's name
-     * @param pic -- An Array of pictures for fighter animations
+     * @param pics -- An Vector of pictures for fighter animations
      */
-    explicit Fighter(QString fname, QPixmap& pic);
+    explicit Fighter(const QString &fname, const QVector<QPixmap>& pics);
 
     /*Destructor*/
     ~Fighter(){};
@@ -106,6 +107,11 @@ public:
     void takePunch();
 
     /**
+     * @brief reset - resets fighter to default image
+     */
+    void reset();
+
+    /**
      * @brief getOpponent - returns a pointer to the Fighter's opponent
      * @return a pointer to this fighter's opponent
      */
@@ -117,6 +123,7 @@ public:
 
 private:
     QString name;//Fighter's name
+    QVector<QPixmap> pics;
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking
     Fighter* opponent = nullptr;//Fighter's opponent

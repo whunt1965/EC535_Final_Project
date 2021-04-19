@@ -1,6 +1,6 @@
 #include "game.h"
 
-Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
+Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVector<QPixmap> &player2pics){
 
     scene = new QGraphicsScene();
     view->setScene(scene);
@@ -20,10 +20,10 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
 
 
     //Create fighters
-    player1 = new Fighter("Player 1", player1pic);
+    player1 = new Fighter("Player 1", player1pics);
     player1->setPos(50,220);
 
-    player2 = new Fighter("Player 2", player2pic);
+    player2 = new Fighter("Player 2", player2pics);
     player2->setPos(600, 220);
 
     //set fighter opponents

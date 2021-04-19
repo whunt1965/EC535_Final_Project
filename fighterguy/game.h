@@ -9,6 +9,7 @@
 #include <QTimer>
 #include "fighter.h"
 #include "controller.h"
+#include <QVector>
 #include "timer.h"
 
 class Game: public QGraphicsView{
@@ -20,7 +21,7 @@ public:
      * @param player1 - Player1 base image
      * @param player2 - Player2 base image
      */
-    Game(QGraphicsView* view, QPixmap player1, QPixmap player2);
+    Game(QGraphicsView* view, const QVector<QPixmap> &player1, const QVector<QPixmap> &player2);
 
     //Destructor for Game
     ~Game();
