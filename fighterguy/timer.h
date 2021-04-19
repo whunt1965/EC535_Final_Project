@@ -13,6 +13,7 @@ class MyTimer : public QObject
     Q_OBJECT
 public:
     MyTimer(QGraphicsTextItem* timerLabel, Controller* controller);
+    ~MyTimer();
     QTimer *timer;
     QGraphicsTextItem* timerLabel;
 

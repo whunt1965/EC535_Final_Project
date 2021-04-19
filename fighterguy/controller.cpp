@@ -1,6 +1,7 @@
 #include "controller.h"
 #include "mainwindow.h"
 #include <QGraphicsTextItem>
+#include <QDebug>
 
 
 extern MainWindow* w;
@@ -23,9 +24,11 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
 
         /********* Player 1 Keys ********/
         case Qt::Key_A:{ //Player 1 move left - A key - ensure don't move beyond 0 coord
-            if(Player1->pos().x() -100 > 0){
-                Player1->moveLeft();
-            }
+              Player1->moveLeft();
+              qDebug()<< Player1->pos().x();
+//            if(Player1->pos().x() -200 > 0){
+//                Player1->moveLeft();
+//            }
             break;
         }
 
@@ -65,7 +68,7 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
         }
 
         case Qt::Key_L:{//Player2 move right - L key -- cannot move out of scene --need to tweak
-            if(Player2->pos().x() + 100 < 800){
+            if(Player2->pos().x() + 200 < 800){
                 Player2->moveRight();
             }
             break;

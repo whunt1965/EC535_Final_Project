@@ -5,17 +5,17 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
     scene = new QGraphicsScene();
     view->setScene(scene);
 
-    QPixmap backgroundPic (":/assets/beach.png");
+//    QPixmap backgroundPic (":/assets/beach.png");
 
 
 //    QPixmap mypix (":/assets/lifegaurd.png");
-    QGraphicsPixmapItem* item =view->scene()->addPixmap(backgroundPic);
+//    QGraphicsPixmapItem* item =view->scene()->addPixmap(backgroundPic);
 
 //    item->setPixmap(backgroundPic.scaled(200,200,Qt::KeepAspectRatio));
 
-  //  setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
- //   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
- //   setFixedSize(800,600);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setFixedSize(800,600);
 
 
     //Create fighters
@@ -34,9 +34,9 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
     scene->addItem(player2);
 
     //add scores to scene
-    this->p1Score = new Score("Player1", player1->getHealth());
+    this->p1Score = new Score(player1->getName(), player1->getHealth());
     p1Score->setPos(50, 40);
-    this->p2Score = new Score("Player2", player2->getHealth());
+    this->p2Score = new Score(player2->getName(), player2->getHealth());
     p2Score->setPos(600, 40);
     scene->addItem(p1Score);
     scene->addItem(p2Score);

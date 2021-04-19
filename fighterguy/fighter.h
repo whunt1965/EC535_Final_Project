@@ -17,7 +17,6 @@ public:
 
     /**
      * @brief Constructor for a fighter
-     * @param in_id - The fighter's id
      * @param fname - The fighter's name
      * @param pic -- An Array of pictures for fighter animations
      */
@@ -118,8 +117,6 @@ private:
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking
     Fighter* opponent = nullptr;//Fighter's opponent
-
-    //also need some sort of position...
 
 };
 

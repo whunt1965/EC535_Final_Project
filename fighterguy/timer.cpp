@@ -15,16 +15,17 @@ MyTimer::MyTimer(QGraphicsTextItem* timerLabel, Controller* controller)
     // msec
     timer->start(1000);
 
-    QString* timerguy = new QString();
-    *timerguy ="2:00";
-
-
-    timerLabel->setPlainText(*timerguy);
+    timerLabel->setPlainText("2:00");
     timerLabel->setDefaultTextColor(Qt::black);//we can play with this color
     timerLabel->setFont(QFont("times",16));//and this font type and size
 
 
     seconds= 12;
+}
+
+MyTimer::~MyTimer(){
+    delete timer;
+
 }
 
 void MyTimer::MyTimerSlot()
