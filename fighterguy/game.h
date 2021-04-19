@@ -33,6 +33,7 @@ private:
     Score* p1Score;
     Score* p2Score;
     Controller* controller;
+    QGraphicsScene* scene;
     MyTimer* timer;
 
 };

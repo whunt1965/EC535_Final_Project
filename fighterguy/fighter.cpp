@@ -4,16 +4,14 @@
 //default constructor
 //need to add a location...
 Fighter::Fighter()
-    : id(0),
-      name("default"),
+    : name("default"),
       health(20),
       blocking(false){}
 
 //parameterized constructor
 //need to add a location...
-Fighter::Fighter(int in_id, QString fname, QPixmap& pic)
-    : id(in_id),
-      name(fname),
+Fighter::Fighter(QString fname, QPixmap& pic)
+    : name(fname),
       health(20),
       blocking(false){
 

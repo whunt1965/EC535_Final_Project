@@ -148,10 +148,12 @@ void Controller::timeUp(){
     if(Player1->getHealth() > Player2->getHealth()){
         w->reset(Player1->getName());
     }
-    else{
+    else if(Player2->getHealth() > Player1->getHealth()){
          w->reset(Player2->getName());
+    }else{
+        w->reset("No Winner...");
     }
-    Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
+//    Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
 
 }
 

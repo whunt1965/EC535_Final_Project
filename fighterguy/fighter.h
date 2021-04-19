@@ -21,7 +21,7 @@ public:
      * @param fname - The fighter's name
      * @param pic -- An Array of pictures for fighter animations
      */
-    explicit Fighter(int in_id, QString fname, QPixmap& pic);
+    explicit Fighter(QString fname, QPixmap& pic);
 
     /*Destructor*/
     ~Fighter(){};
@@ -114,7 +114,6 @@ public:
 
 
 private:
-    int id;//Fighter's ID
     QString name;//Fighter's name
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking

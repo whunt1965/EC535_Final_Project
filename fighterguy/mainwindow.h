@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "game.h"
-#include "controller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,7 +23,6 @@ private slots:
 
     void on_newGameButton_clicked();
 
-
     void on_FightButton_clicked();
 
     void on_leftarrow_clicked();
@@ -42,7 +40,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Game* game = nullptr;
-
+    QPixmap p1Pic;
+    QPixmap p2Pic;
 
 };
 #endif // MAINWINDOW_H

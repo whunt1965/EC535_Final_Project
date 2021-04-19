@@ -38,6 +38,6 @@ void MyTimer::MyTimerSlot()
     timerLabel->setPlainText(secondsremaining);
 
     if(seconds == 0){
-        controller->endGame();
+        controller->timeUp();
     }
 }
