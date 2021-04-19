@@ -34,10 +34,12 @@ MainWindow::~MainWindow()
     delete game;
 }
 
-void MainWindow::reset(){
+void MainWindow::reset(QString name){
     delete game;
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->winnerName->setText(name);
+    ui->stackedWidget->setCurrentIndex(3);
 }
+
 
 
 
@@ -103,4 +105,19 @@ void MainWindow::changeCharacterImage(){
         ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
 
     }
+}
+
+void MainWindow::on_newGameBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_exitBtn_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_mainMenuBtn_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }

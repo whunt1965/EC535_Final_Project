@@ -6,9 +6,11 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include <QTimer>
 #include "fighter.h"
 #include "score.h"
 #include "controller.h"
+#include "timer.h"
 
 class Game: public QGraphicsView{
 
@@ -31,6 +33,7 @@ private:
     Score* p1Score;
     Score* p2Score;
     Controller* controller;
+    MyTimer* timer;
 
 };
 

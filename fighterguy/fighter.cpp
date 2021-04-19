@@ -47,12 +47,12 @@ void Fighter::unblock(){
 
 //move a fighter in -x direction
 void Fighter::moveLeft(){
-    setPos(x()-10, y());
+    setPos(x()-30, y());
 }
 
 //move a fighter in +x direction
 void Fighter::moveRight(){
-    setPos(x()+10, y());
+    setPos(x()+30, y());
 }
 
 

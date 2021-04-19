@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "game.h"
+#include "controller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void reset();
+    void reset(QString name);
 
 private slots:
 
@@ -31,6 +32,12 @@ private slots:
     void on_rightArrow_clicked();
 
     void changeCharacterImage();
+
+    void on_newGameBtn_clicked();
+
+    void on_exitBtn_clicked();
+
+    void on_mainMenuBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

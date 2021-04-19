@@ -3,6 +3,7 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QObject>
+#include <QDebug>
 #include "fighter.h"
 #include "score.h"
 
@@ -19,6 +20,8 @@ public:
     void update();
 
     void endGame();
+
+    void timeUp();
 
     bool eventFilter(QObject *object, QEvent *event);
 

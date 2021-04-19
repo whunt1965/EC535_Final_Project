@@ -26,3 +26,6 @@ void Score::setScore(int score){
 int Score::getScore(){
     return this->score;
 }
+
+
+

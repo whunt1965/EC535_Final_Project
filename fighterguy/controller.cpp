@@ -124,7 +124,7 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
 void Controller::update(){
     P1Score->setScore(Player1->getHealth());
     P2Score->setScore(Player2->getHealth());
-    if(Player1->getHealth() == 0 || Player2->getHealth() == 0 ){
+    if(Player1->getHealth() <= 0 || Player2->getHealth() <= 0 ){
         endGame();
     }
 
@@ -134,11 +134,24 @@ void Controller::endGame(){
     Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
 
     //add code here to display winner and then select quit or rematch
-    QGraphicsTextItem* win = new QGraphicsTextItem(winner->getName() + " wins!");
-    win->setPos(400, 400);
-    scene->addItem(win);
+   // QGraphicsTextItem* win = new QGraphicsTextItem(winner->getName() + " wins!");
+  //  win->setPos(400, 400);
+  //  scene->addItem(win);
 
-//    w->reset();//kills the program
+    w->reset(winner->getName());//kills the program
+
+}
+
+
+void Controller::timeUp(){
+
+    if(Player1->getHealth() > Player2->getHealth()){
+        w->reset(Player1->getName());
+    }
+    else{
+         w->reset(Player2->getName());
+    }
+    Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
 
 }
 
