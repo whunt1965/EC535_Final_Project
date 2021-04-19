@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "game.h"
+#include <QProgressBar>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,11 +44,15 @@ private slots:
 
     void changeCharacterImageTwo();
 
+
+
 private:
     Ui::MainWindow *ui;
     Game* game = nullptr;
     QPixmap p1Pic;
     QPixmap p2Pic;
+  //  QProgressBar* progressBar;
+    friend class Controller;
 
 };
 #endif // MAINWINDOW_H

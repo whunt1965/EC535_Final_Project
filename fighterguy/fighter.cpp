@@ -57,7 +57,16 @@ void Fighter::moveRight(){
 //make fighter jump 1 unit (up) in y direction
 void Fighter::jump(){
 
-    //TO-DO
+    qDebug() << "Jumping";
+    QTimeLine *timer = new QTimeLine(500);
+    timer->setFrameRange(0, 100);
+
+    QGraphicsItemAnimation *animationUp = new QGraphicsItemAnimation;
+    animationUp->setItem(this);
+    animationUp->setTimeLine(timer);
+    animationUp->setPosAt(.2, QPointF(x(), y()-200));
+     animationUp->setPosAt(1, QPointF(x(), y()));
+    timer->start();
 
 }
 

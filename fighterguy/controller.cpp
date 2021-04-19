@@ -127,6 +127,7 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
 void Controller::update(){
     P1Score->setScore(Player1->getHealth());
     P2Score->setScore(Player2->getHealth());
+    w->ui->progressBar->setValue(Player1->getHealth());
     if(Player1->getHealth() <= 0 || Player2->getHealth() <= 0 ){
         endGame();
     }

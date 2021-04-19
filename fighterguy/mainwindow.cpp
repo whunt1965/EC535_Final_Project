@@ -18,8 +18,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
+   // this->progressBar = progressBar;
+     ui->progressBar->setRange(0,20);
+
     QGraphicsScene* scene = new QGraphicsScene();
-    ui->graphicsView->setScene(scene);
+   // ui->graphicsView->setScene(scene);
 
 //    QPixmap mypix (":/assets/lifegaurd.png");
 //    Fighter* fighter = new Player1(1, "Guy", mypix);
@@ -141,7 +144,7 @@ void MainWindow::on_rightArrow_2_clicked()
 {
     characterSelectTwo++;
     characterSelectTwo = characterSelectTwo %2;
-
+       ui->progressBar->setValue(20);
     changeCharacterImageTwo();
 
 }

@@ -4,6 +4,9 @@
 #include<QGraphicsPixmapItem>
 #include<QKeyEvent>
 #include <QString>
+#include  <QGraphicsItemAnimation>
+#include <QTimeLine>
+#include <QDebug>
 
 /**
  * @brief The Fighter class
