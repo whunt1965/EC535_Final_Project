@@ -5,5 +5,15 @@
         <file>assets/lifegaurd.png</file>
         <file>assets/foodtruckJim.png</file>
         <file>assets/beachBrawlLogo.png</file>
+        <file>assets/Exit_Btn.png</file>
+        <file>assets/Fight_Btn.png</file>
+        <file>assets/MainMenu_Btn.png</file>
+        <file>assets/NewGame_Btn.png</file>
+        <file>assets/Quit_Btn.png</file>
+        <file>assets/SelectMainText.png</file>
+        <file>assets/ArrowBtnL.png</file>
+        <file>assets/ArrowBtnR.png</file>
+        <file>assets/Player1Text.png</file>
+        <file>assets/Player2Text.png</file>
     </qresource>
 </RCC>
