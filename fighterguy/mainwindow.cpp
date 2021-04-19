@@ -69,21 +69,22 @@ void MainWindow::on_FightButton_clicked()
     QPixmap mypix (":/assets/lifegaurd.png");
 
     if(characterSelect ==0){
-        p1Pic= QPixmap(":/assets/lifegaurd.png");
-        p2Pic= QPixmap(":/assets/foodtruckJim.png");
+
+        p1Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/foodtruckJim.png")};
+        p2Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lifegaurd.png")};
 
 //    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
 //    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
        }
     else{
-       p1Pic= QPixmap(":/assets/foodtruckJim.png");
-       p2Pic= QPixmap(":/assets/lifegaurd.png");
+       p1Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lifegaurd.png")};
+       p2Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/foodtruckJim.png")};
 //       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
 
 //       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
     }
 
-    this->game = new Game(ui->graphicsView, p1Pic, p2Pic);
+    this->game = new Game(ui->graphicsView, p1Pics, p2Pics);
 
 
     ui->stackedWidget->setCurrentIndex(2);

@@ -111,10 +111,30 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
             Player1->unblock();
             break;
         }
+
+        case Qt::Key_C:{//Player1 reset after kick - release C key
+            Player1->reset();
+            break;
+        }
+
+        case Qt::Key_X:{//Player1 reset after punch - release X key
+            Player1->reset();
+            break;
+        }
         /********* Player 2 Keys ********/
 
         case Qt::Key_K:{    //Player2 unblock - release K key
             Player2->unblock();
+            break;
+        }
+
+        case Qt::Key_N:{//Player2 reset after kick- release N key
+            Player2->reset();
+            break;
+        }
+
+        case Qt::Key_M:{//Player2 reset after punch - release M key
+            Player2->reset();
             break;
         }
         default: break;
