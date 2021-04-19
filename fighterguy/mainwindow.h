@@ -18,6 +18,8 @@ public:
     ~MainWindow();
     void reset(QString name);
 
+    void updateProgress(int p1Score, int p2Score);
+
 private slots:
 
     void on_quitButton_clicked();

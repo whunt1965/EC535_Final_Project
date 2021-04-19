@@ -20,9 +20,10 @@ MainWindow::MainWindow(QWidget *parent)
 
    // this->progressBar = progressBar;
      ui->progressBar->setRange(0,20);
+     ui->progressBar_2->setRange(0,20);
 
-    QGraphicsScene* scene = new QGraphicsScene();
-   // ui->graphicsView->setScene(scene);
+//    QGraphicsScene* scene = new QGraphicsScene();
+//    ui->graphicsView->setScene(scene);
 
 //    QPixmap mypix (":/assets/lifegaurd.png");
 //    Fighter* fighter = new Player1(1, "Guy", mypix);
@@ -42,6 +43,11 @@ void MainWindow::reset(QString name){
     delete game;
     ui->winnerName->setText(name);
     ui->stackedWidget->setCurrentIndex(3);
+}
+
+void MainWindow::updateProgress(int p1Score, int p2Score){
+    ui->progressBar->setValue(p1Score);
+    ui->progressBar_2->setValue(p2Score);
 }
 
 

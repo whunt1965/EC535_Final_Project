@@ -8,7 +8,6 @@
 #include <QGraphicsPixmapItem>
 #include <QTimer>
 #include "fighter.h"
-#include "score.h"
 #include "controller.h"
 #include "timer.h"
 
@@ -30,8 +29,6 @@ public:
 private:
     Fighter* player1;
     Fighter* player2;
-    Score* p1Score;
-    Score* p2Score;
     Controller* controller;
     QGraphicsScene* scene;
     MyTimer* timer;

@@ -5,13 +5,12 @@
 #include <QObject>
 #include <QDebug>
 #include "fighter.h"
-#include "score.h"
 
 class Controller: public QObject{
       Q_OBJECT
 public:
 
-    Controller(QGraphicsScene* scene, Fighter* P1, Fighter* P2, Score *P1S, Score *P2S);
+    Controller(QGraphicsScene* scene, Fighter* P1, Fighter* P2);
 
     void handleKeyPressEvent(QKeyEvent *event);
 
@@ -29,9 +28,6 @@ private:
     QGraphicsScene* scene;
     Fighter* Player1;
     Fighter* Player2;
-    Score* P1Score;
-    Score* P2Score;
-
 
 };
 

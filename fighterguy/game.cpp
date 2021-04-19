@@ -34,18 +34,7 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
     scene->addItem(player1);
     scene->addItem(player2);
 
-    //add scores to scene
-    this->p1Score = new Score(player1->getName(), player1->getHealth());
-    p1Score->setPos(50, 40);
-    this->p2Score = new Score(player1->getName(), player2->getHealth());
-    p2Score->setPos(600, 40);
-    scene->addItem(p1Score);
-    scene->addItem(p2Score);
-
-
-
-
-    this->controller = new Controller(scene, player1, player2, p1Score, p2Score);
+    this->controller = new Controller(scene, player1, player2);
 
     //Initialize timer
     QGraphicsTextItem* gameTimer = new QGraphicsTextItem();
@@ -59,8 +48,6 @@ Game::Game(QGraphicsView* view, QPixmap player1pic, QPixmap player2pic){
 Game::~Game(){
     delete player1;
     delete player2;
-    delete p1Score;
-    delete p2Score;
     delete scene;
     delete timer;
     delete controller;

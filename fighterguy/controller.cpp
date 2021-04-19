@@ -6,13 +6,12 @@
 
 extern MainWindow* w;
 
-Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2, Score *P1S, Score *P2S)
+Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
     : scene(scene),
       Player1(P1),
-      Player2(P2),
-      P1Score(P1S),
-      P2Score(P2S){
+      Player2(P2){
         scene->installEventFilter(this);
+        update();
 
 }
 
@@ -125,9 +124,7 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
 
 //update scores
 void Controller::update(){
-    P1Score->setScore(Player1->getHealth());
-    P2Score->setScore(Player2->getHealth());
-    w->ui->progressBar->setValue(Player1->getHealth());
+    w->updateProgress(Player1->getHealth(), Player2->getHealth());
     if(Player1->getHealth() <= 0 || Player2->getHealth() <= 0 ){
         endGame();
     }
