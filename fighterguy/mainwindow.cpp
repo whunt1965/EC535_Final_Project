@@ -68,24 +68,18 @@ void MainWindow::on_FightButton_clicked()
 {
 
     if(characterSelect ==0){
-
         p1Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-        p2Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-
-//    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
-//    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
-       }
-    else{
+    }else{
        p1Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-       p2Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-//       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
+    }
 
-//       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
+    if(characterSelectTwo ==0){
+        p2Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
+    }else{
+        p2Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
     }
 
     this->game = new Game(ui->graphicsView, p1Pics, p2Pics);
-
-
     ui->stackedWidget->setCurrentIndex(2);
 }
 
@@ -150,7 +144,7 @@ void MainWindow::on_rightArrow_2_clicked()
 {
     characterSelectTwo++;
     characterSelectTwo = characterSelectTwo %2;
-       ui->progressBar->setValue(20);
+    ui->progressBar->setValue(20);
     changeCharacterImageTwo();
 
 }
