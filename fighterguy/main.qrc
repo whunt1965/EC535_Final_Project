@@ -19,5 +19,10 @@
         <file>assets/lgblock.png</file>
         <file>assets/lgkick.png</file>
         <file>assets/lgpunch.png</file>
+        <file>assets/jimblock.png</file>
+        <file>assets/jimkick.png</file>
+        <file>assets/jimpunch.png</file>
+        <file>assets/jimnormal.png</file>
+        <file>assets/lgLenny.png</file>
     </qresource>
 </RCC>

@@ -70,15 +70,16 @@ void MainWindow::on_FightButton_clicked()
 
     if(characterSelect ==0){
 
-        p1Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-        p2Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lifegaurd.png")};
+        p1Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
+        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
 
 //    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
 //    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
        }
     else{
-       p1Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lifegaurd.png")};
-       p2Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/foodtruckJim.png")};
+
+        p1Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
+        p2Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
 //       QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
 
 //       item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));

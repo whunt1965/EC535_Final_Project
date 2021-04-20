@@ -36,7 +36,7 @@ int Fighter::getHealth(){
 
 //set blocking state to true
 void Fighter::block(){
-    setPixmap(pics[3].scaled(100,200,Qt::KeepAspectRatio));
+    setPixmap(pics[3].scaled(120,240,Qt::KeepAspectRatio));
     this->blocking = true;
 }
 
@@ -99,7 +99,7 @@ void Fighter::kick(){
 
 //Punch an opponent
 void Fighter::punch(){
-    setPixmap(pics[2].scaled(140,280,Qt::KeepAspectRatio));
+    setPixmap(pics[2].scaled(120,240,Qt::KeepAspectRatio));   //.scaled(140,280,Qt::KeepAspectRatio));
     if (this->opponentInRange()){
         this->opponent->takePunch();
     }

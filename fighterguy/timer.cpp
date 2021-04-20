@@ -20,7 +20,7 @@ MyTimer::MyTimer(QGraphicsTextItem* timerLabel, Controller* controller)
     timerLabel->setFont(QFont("times",16));//and this font type and size
 
 
-    seconds= 12;
+    seconds= 75;
 }
 
 MyTimer::~MyTimer(){
