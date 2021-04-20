@@ -16,5 +16,8 @@
         <file>assets/Player1Text.png</file>
         <file>assets/Player2Text.png</file>
         <file>assets/beachsmall.png</file>
+        <file>assets/lgblock.png</file>
+        <file>assets/lgkick.png</file>
+        <file>assets/lgpunch.png</file>
     </qresource>
 </RCC>

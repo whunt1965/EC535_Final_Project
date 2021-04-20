@@ -70,7 +70,7 @@ void MainWindow::on_FightButton_clicked()
 
     if(characterSelect ==0){
 
-        p1Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/foodtruckJim.png")};
+        p1Pics= {QPixmap(":/assets/lifegaurd.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
         p2Pics= {QPixmap(":/assets/foodtruckJim.png"), QPixmap(":/assets/lifegaurd.png")};
 
 //    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);

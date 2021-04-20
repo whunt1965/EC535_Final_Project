@@ -36,11 +36,13 @@ int Fighter::getHealth(){
 
 //set blocking state to true
 void Fighter::block(){
+    setPixmap(pics[3].scaled(100,200,Qt::KeepAspectRatio));
     this->blocking = true;
 }
 
 //set blocking state to false
 void Fighter::unblock(){
+    setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
     this->blocking = false;
 }
 
@@ -65,7 +67,7 @@ void Fighter::jump(){
     QGraphicsItemAnimation *animationUp = new QGraphicsItemAnimation;
     animationUp->setItem(this);
     animationUp->setTimeLine(timer);
-    animationUp->setPosAt(.2, QPointF(x(), y()-200));
+    animationUp->setPosAt(.2, QPointF(x(), y()-50));
      animationUp->setPosAt(1, QPointF(x(), y()));
     timer->start();
 
@@ -97,6 +99,7 @@ void Fighter::kick(){
 
 //Punch an opponent
 void Fighter::punch(){
+    setPixmap(pics[2].scaled(140,280,Qt::KeepAspectRatio));
     if (this->opponentInRange()){
         this->opponent->takePunch();
     }
