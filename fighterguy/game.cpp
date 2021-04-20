@@ -5,7 +5,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     scene = new QGraphicsScene();
     view->setScene(scene);
 
-    QPixmap backgroundPic (":/assets/beach.png");
+    QPixmap backgroundPic (":/assets/beachsmall.png");
 
 
 //    QPixmap mypix (":/assets/lifegaurd.png");
@@ -21,10 +21,10 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
 
     //Create fighters
     player1 = new Fighter("Player 1", player1pics);
-    player1->setPos(50,220);
+    player1->setPos(20,100);
 
     player2 = new Fighter("Player 2", player2pics);
-    player2->setPos(600, 220);
+    player2->setPos(340, 100);
 
     //set fighter opponents
     player1->setOpponent(player2);

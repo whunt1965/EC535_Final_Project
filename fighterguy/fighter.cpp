@@ -16,7 +16,7 @@ Fighter::Fighter(const QString &fname, const QVector<QPixmap>& pics)
       health(20),
       blocking(false){
 
-        setPixmap(pics[0].scaled(200,400,Qt::KeepAspectRatio));
+        setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
 }
 
 //sets a fighter's opponent

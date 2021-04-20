@@ -15,5 +15,6 @@
         <file>assets/ArrowBtnR.png</file>
         <file>assets/Player1Text.png</file>
         <file>assets/Player2Text.png</file>
+        <file>assets/beachsmall.png</file>
     </qresource>
 </RCC>
