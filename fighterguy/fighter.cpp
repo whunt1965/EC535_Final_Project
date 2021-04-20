@@ -46,12 +46,12 @@ void Fighter::unblock(){
 
 //move a fighter in -x direction
 void Fighter::moveLeft(){
-    setPos(x()-30, y());
+    setPos(x()-16, y());
 }
 
 //move a fighter in +x direction
 void Fighter::moveRight(){
-    setPos(x()+30, y());
+    setPos(x()+16, y());
 }
 
 
@@ -74,17 +74,22 @@ void Fighter::jump(){
 //Determines if an opponent is in range for an attack
 bool Fighter::opponentInRange(){
     //TO-DO
+    qDebug() << this->pos().x();
+    qDebug() << this->pos().y();
     qreal xdist = qFabs(this->pos().x() - this->opponent->pos().x());
     qreal ydist = qFabs(this->pos().y() - this->opponent->pos().y());
-    if(xdist <= 200 && ydist == 0){
+    if(xdist <= 220 && ydist == 0){
+        qDebug() << "In range";
         return true;
     }
+
+    qDebug() << "NOT In range";
     return false;
 }
 
 //Kick an opponent
 void Fighter::kick(){
-    setPixmap(pics[1].scaled(200,400,Qt::KeepAspectRatio));
+    setPixmap(pics[1].scaled(120,240,Qt::KeepAspectRatio));
     if (this->opponentInRange()){
         this->opponent->takeKick();
     }
@@ -116,7 +121,7 @@ void Fighter::takePunch(){
 
 //reset to default image
 void Fighter::reset(){
-    setPixmap(pics[0].scaled(200,400,Qt::KeepAspectRatio));
+    setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
 }
 
 //getter for opponent pointer

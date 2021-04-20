@@ -21,10 +21,15 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
 
     //Create fighters
     player1 = new Fighter("Player 1", player1pics);
-    player1->setPos(20,100);
+    player1->setPos(30,100);
 
     player2 = new Fighter("Player 2", player2pics);
-    player2->setPos(340, 100);
+
+    QTransform transform;
+    transform.scale(-1,1);
+    player2->setTransform(transform);
+    player2->setPos(440, 100);
+
 
     //set fighter opponents
     player1->setOpponent(player2);
@@ -39,7 +44,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     //Initialize timer
     QGraphicsTextItem* gameTimer = new QGraphicsTextItem();
     timer = new MyTimer(gameTimer, this->controller);
-    gameTimer->setPos(350, 60);
+    gameTimer->setPos(240, 20);
     scene->addItem(gameTimer);
 
 }
