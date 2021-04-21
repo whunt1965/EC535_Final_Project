@@ -12,12 +12,6 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     QGraphicsPixmapItem* item =view->scene()->addPixmap(backgroundPic);
     item->setPos(0, 0);
 
-//    item->setPixmap(backgroundPic.scaled(200,200,Qt::KeepAspectRatio));
-
-  //  setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
- //   setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
- //   setFixedSize(800,600);
-
 
     //Create fighters
     player1 = new Fighter("Player 1", player1pics);
@@ -25,6 +19,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
 
     player2 = new Fighter("Player 2", player2pics);
 
+    //Flips Fighter2 image
     QTransform transform;
     transform.scale(-1,1);
     player2->setTransform(transform);
@@ -39,6 +34,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     scene->addItem(player1);
     scene->addItem(player2);
 
+    //setup controller
     this->controller = new Controller(scene, player1, player2);
 
     //Initialize timer

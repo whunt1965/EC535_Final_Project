@@ -15,12 +15,12 @@ MyTimer::MyTimer(QGraphicsTextItem* timerLabel, Controller* controller)
     // msec
     timer->start(1000);
 
-    timerLabel->setPlainText("2:00");
+    timerLabel->setPlainText("1:30");
     timerLabel->setDefaultTextColor(Qt::black);//we can play with this color
     timerLabel->setFont(QFont("times",16));//and this font type and size
 
 
-    seconds= 75;
+    seconds= 90;
 }
 
 MyTimer::~MyTimer(){
@@ -34,9 +34,14 @@ void MyTimer::MyTimerSlot()
     int outMinutes = seconds / 60;
     int outSeconds = seconds % 60;
 
-
-    QString secondsremaining = QString::number(outMinutes) + ":" +  QString::number(outSeconds);
-    timerLabel->setPlainText(secondsremaining);
+    //Normalize display so seconds have leading 0 if less than 10 (ie, mm:09 vs mm:9)
+    if(outSeconds < 10){
+        QString secondsremaining = QString::number(outMinutes) + ":0" +  QString::number(outSeconds);
+        timerLabel->setPlainText(secondsremaining);
+    }else{
+        QString secondsremaining = QString::number(outMinutes) + ":" +  QString::number(outSeconds);
+        timerLabel->setPlainText(secondsremaining);
+    }
 
     if(seconds == 0){
         controller->timeUp();

@@ -4,8 +4,9 @@
 #include <QDebug>
 
 
-extern MainWindow* w;
+extern MainWindow* w;//reference to Mainwindow for callbacks
 
+//constructor
 Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
     : scene(scene),
       Player1(P1),
@@ -140,7 +141,7 @@ void Controller::handleKeyReleaseEvent(QKeyEvent *event){
     update();
 }
 
-//update scores
+//update scores (health of each fighter)
 void Controller::update(){
     w->updateProgress(Player1->getHealth(), Player2->getHealth());
     if(Player1->getHealth() <= 0 || Player2->getHealth() <= 0 ){
@@ -149,19 +150,16 @@ void Controller::update(){
 
 }
 
+//Handles end of game when a fighter's health goes to 0
+//invokes callback on MainWindow
 void Controller::endGame(){
     Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
-
-    //add code here to display winner and then select quit or rematch
-   // QGraphicsTextItem* win = new QGraphicsTextItem(winner->getName() + " wins!");
-  //  win->setPos(400, 400);
-  //  scene->addItem(win);
-
     w->reset(winner->getName());//kills the program
 
 }
 
-
+//Handles timer expiry
+//invokes callback on MainWindow
 void Controller::timeUp(){
 
     if(Player1->getHealth() > Player2->getHealth()){
@@ -172,7 +170,6 @@ void Controller::timeUp(){
     }else{
         w->reset("No Winner...");
     }
-//    Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
 
 }
 
