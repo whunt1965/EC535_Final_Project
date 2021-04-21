@@ -28,6 +28,16 @@ MyTimer::~MyTimer(){
 
 }
 
+void MyTimer::pause(){
+    int remaining = timer->remainingTime();
+    timer->stop();
+    timer->setInterval(remaining);
+ }
+
+void MyTimer::resume(){
+    timer->start();
+}
+
 void MyTimer::MyTimerSlot()
 {
     seconds--;

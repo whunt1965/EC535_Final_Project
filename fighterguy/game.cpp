@@ -39,7 +39,10 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     scene->addItem(player1);
     scene->addItem(player2);
 
+    Paused = false;
+
     this->controller = new Controller(scene, player1, player2);
+
 
     //Initialize timer
     QGraphicsTextItem* gameTimer = new QGraphicsTextItem();
@@ -49,7 +52,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
 
 }
 
-
+//destructor for game
 Game::~Game(){
     delete player1;
     delete player2;
@@ -57,3 +60,19 @@ Game::~Game(){
     delete timer;
     delete controller;
 }
+
+//determine if game is paused
+bool Game::isPaused(){
+    return Paused;
+}
+
+//set value for PauseButton
+void Game::togglePause(){
+    Paused = !Paused;
+    if(Paused){
+        timer->pause();
+    }else{
+        timer->resume();
+    }
+}
+

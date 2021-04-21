@@ -18,6 +18,17 @@ Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
 //key press event handler
 void Controller::handleKeyPressEvent(QKeyEvent *event){
 
+    //Handle pause event
+    if(event->key()==Qt::Key_Space){
+        w->game->togglePause();
+        return;
+    }
+
+    //Return if we are paused -- prevent further actions
+    if(w->game->isPaused()){
+        return;
+    }
+
 
     switch(event->key()){
 
@@ -153,19 +164,12 @@ void Controller::update(){
 
 void Controller::endGame(){
     Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
-
-    //add code here to display winner and then select quit or rematch
-   // QGraphicsTextItem* win = new QGraphicsTextItem(winner->getName() + " wins!");
-  //  win->setPos(400, 400);
-  //  scene->addItem(win);
-
     w->reset(winner->getName());//kills the program
 
 }
 
 
 void Controller::timeUp(){
-
     if(Player1->getHealth() > Player2->getHealth()){
         w->reset(Player1->getName());
     }
@@ -174,8 +178,6 @@ void Controller::timeUp(){
     }else{
         w->reset("No Winner...");
     }
-//    Fighter* winner = Player2->getHealth() == 0 ? Player1 : Player2;
-
 }
 
 //event filter
