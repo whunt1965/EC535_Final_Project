@@ -28,6 +28,16 @@ MyTimer::~MyTimer(){
 
 }
 
+//pause timer
+void MyTimer::pause(){
+    timer->stop();
+ }
+
+//restart timer
+void MyTimer::resume(){
+    timer->start(1000);
+}
+
 void MyTimer::MyTimerSlot()
 {
     seconds--;

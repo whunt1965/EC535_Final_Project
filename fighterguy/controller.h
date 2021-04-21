@@ -28,7 +28,6 @@ private:
     QGraphicsScene* scene;
     Fighter* Player1;
     Fighter* Player2;
-
 };
 
 #endif // CONTROLLLER_H

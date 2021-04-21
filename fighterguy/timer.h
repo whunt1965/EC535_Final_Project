@@ -16,6 +16,8 @@ public:
     ~MyTimer();
     QTimer *timer;
     QGraphicsTextItem* timerLabel;
+    void pause();//pause timer
+    void resume();//resume timer
 
 public slots:
     void MyTimerSlot();
