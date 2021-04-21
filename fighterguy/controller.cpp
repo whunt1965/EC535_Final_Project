@@ -23,8 +23,6 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
 
         /********* Player 1 Keys ********/
         case Qt::Key_A:{ //Player 1 move left - A key - ensure don't move beyond 0 coord
-//              Player1->moveLeft();
-              qDebug()<< Player1->pos().x();
             if(Player1->pos().x() > -30){
                 Player1->moveLeft();
             }

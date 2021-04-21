@@ -16,7 +16,13 @@ Fighter::Fighter(const QString &fname, const QVector<QPixmap>& pics)
       health(20),
       blocking(false){
 
-        setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
+    setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
+}
+
+//destructor - clean up dynamically allocated memory
+Fighter::~Fighter(){
+    delete timer;
+    delete animationUp;
 }
 
 //sets a fighter's opponent
@@ -59,33 +65,27 @@ void Fighter::moveRight(){
 
 //make fighter jump 1 unit (up) in y direction
 void Fighter::jump(){
-
-    qDebug() << "Jumping";
-    QTimeLine *timer = new QTimeLine(500);
-    timer->setFrameRange(0, 100);
-
-    QGraphicsItemAnimation *animationUp = new QGraphicsItemAnimation;
-    animationUp->setItem(this);
-    animationUp->setTimeLine(timer);
-    animationUp->setPosAt(.2, QPointF(x(), y()-50));
-     animationUp->setPosAt(1, QPointF(x(), y()));
-    timer->start();
-
+    if(timer == nullptr || timer->state() == QTimeLine::NotRunning){
+        delete timer;
+        delete animationUp;
+        timer = new QTimeLine(500);
+        timer->setFrameRange(0, 100);
+        animationUp = new QGraphicsItemAnimation;
+        animationUp->setItem(this);
+        animationUp->setTimeLine(timer);
+        animationUp->setPosAt(.2, QPointF(x(), y()-50));
+        animationUp->setPosAt(1, QPointF(x(), y()));
+        timer->start();
+    }
 }
 
 //Determines if an opponent is in range for an attack
 bool Fighter::opponentInRange(){
-    //TO-DO
-    qDebug() << this->pos().x();
-    qDebug() << this->pos().y();
     qreal xdist = qFabs(this->pos().x() - this->opponent->pos().x());
     qreal ydist = qFabs(this->pos().y() - this->opponent->pos().y());
     if(xdist <= 220 && ydist == 0){
-        qDebug() << "In range";
         return true;
     }
-
-    qDebug() << "NOT In range";
     return false;
 }
 
