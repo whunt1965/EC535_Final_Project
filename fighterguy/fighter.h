@@ -27,7 +27,7 @@ public:
     explicit Fighter(const QString &fname, const QVector<QPixmap>& pics);
 
     /*Destructor*/
-    ~Fighter(){};
+    ~Fighter();
 
     /**
      * @brief setOpponent - sets the fighter's opponent
@@ -123,10 +123,12 @@ public:
 
 private:
     QString name;//Fighter's name
-    QVector<QPixmap> pics;
+    QVector<QPixmap> pics;//vector of pictures
     int health;//a fighter's health - default is 20
     bool blocking;//boolean indeictaing if the fighter is blocking
     Fighter* opponent = nullptr;//Fighter's opponent
+    QTimeLine *timer = nullptr;//timer for jump animation
+    QGraphicsItemAnimation *animationUp = nullptr;//animation for jump
 
 };
 
