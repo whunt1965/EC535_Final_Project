@@ -32,6 +32,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     scene->addItem(player2);
 
     Paused = false;
+
     //setup controller
     this->controller = new Controller(scene, player1, player2);
 
