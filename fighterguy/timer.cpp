@@ -28,14 +28,14 @@ MyTimer::~MyTimer(){
 
 }
 
+//pause timer
 void MyTimer::pause(){
-    int remaining = timer->remainingTime();
     timer->stop();
-    timer->setInterval(remaining);
  }
 
+//restart timer
 void MyTimer::resume(){
-    timer->start();
+    timer->start(1000);
 }
 
 void MyTimer::MyTimerSlot()
