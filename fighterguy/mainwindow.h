@@ -19,6 +19,7 @@ public:
     void reset(QString name);
 
     void updateProgress(int p1Score, int p2Score);
+    Game* game = nullptr;
 
 private slots:
 
@@ -48,7 +49,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Game* game = nullptr;
     QVector<QPixmap> p1Pics;
     QVector<QPixmap> p2Pics;
 

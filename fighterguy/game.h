@@ -26,6 +26,9 @@ public:
     //Destructor for Game
     ~Game();
 
+    bool isPaused();//check pause state
+    void togglePause();//toggle pause value
+
 
 private:
     Fighter* player1;
@@ -33,6 +36,7 @@ private:
     Controller* controller;
     QGraphicsScene* scene;
     MyTimer* timer;
+    bool Paused;//boolean to indicate if game is paused
 
 };
 

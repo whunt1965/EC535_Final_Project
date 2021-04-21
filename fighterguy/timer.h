@@ -17,6 +17,10 @@ public:
     QTimer *timer;
     QGraphicsTextItem* timerLabel;
 
+    //citation for implementing pause/resume behavior: https://stackoverflow.com/questions/35794617/how-to-pause-and-restart-the-qtimer-on-qt/35794807
+    void pause();//pause timer
+    void resume();//resume timer
+
 public slots:
     void MyTimerSlot();
 
