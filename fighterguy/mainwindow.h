@@ -47,6 +47,12 @@ private slots:
 
     void changeCharacterImageTwo();
 
+    void on_exitBtn_2_clicked();
+
+    void on_newGameButton_2_clicked();
+
+    void on_quitButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     QVector<QPixmap> p1Pics;

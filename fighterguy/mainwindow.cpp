@@ -198,3 +198,17 @@ void MainWindow::changeCharacterImageTwo(){
         ui->playerTwoSelect->setText(QString("Karen"));
     }
 }
+
+void MainWindow::on_exitBtn_2_clicked(){
+    ui->stackedWidget->setCurrentIndex(0);
+
+}
+
+void MainWindow::on_newGameButton_2_clicked(){
+    ui->stackedWidget->setCurrentIndex(4);
+
+}
+
+void MainWindow::on_quitButton_2_clicked(){
+    this->reset("No Winner");
+}
