@@ -68,30 +68,30 @@ void MainWindow::on_FightButton_clicked()
 {
 
     if(characterSelect ==0){
-        p1Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
+        p1Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png"), QPixmap(":/assets/lgflinch.png")};
        }
     if(characterSelect ==1){
-        p1Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
+        p1Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png"), QPixmap(":/assets/jimflinch.png")};
      }
     if(characterSelect ==2){
-        p1Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png")};
+        p1Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png"), QPixmap(":/assets/surferflinch.png")};
      }
     if(characterSelect ==3){
-        p1Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png")};
+        p1Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png"),QPixmap(":/assets/karenflinch.png")};
      }
 
 
     if(characterSelectTwo ==0){
-        p2Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
+        p2Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png"), QPixmap(":/assets/lgflinch.png")};
        }
     if(characterSelectTwo ==1){
-        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
+        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png"), QPixmap(":/assets/jimflinch.png")};
      }
     if(characterSelectTwo ==2){
-        p2Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png")};
+        p2Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png"), QPixmap(":/assets/surferflinch.png")};
      }
     if(characterSelectTwo ==3){
-        p2Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png")};
+        p2Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png"), QPixmap(":/assets/karenflinch.png")};
      }
 
     this->game = new Game(ui->graphicsView, p1Pics, p2Pics);

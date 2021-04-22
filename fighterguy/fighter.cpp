@@ -113,11 +113,13 @@ bool Fighter::isBlocking(){
 //take a kick
 void Fighter::takeKick(){
     this->isBlocking()? this->health-=1 : this->health -=2;
+     setPixmap(pics[4].scaled(120,240,Qt::KeepAspectRatio));
 }
 
 //take a punch
 void Fighter::takePunch(){
     if(!this->isBlocking()){
+        setPixmap(pics[4].scaled(120,240,Qt::KeepAspectRatio));
         this->health-=1;
     }
 }

@@ -32,5 +32,9 @@
         <file>assets/surferblock.png</file>
         <file>assets/surferkick.png</file>
         <file>assets/surferpunch.png</file>
+        <file>assets/jimflinch.png</file>
+        <file>assets/karenflinch.png</file>
+        <file>assets/lgflinch.png</file>
+        <file>assets/surferflinch.png</file>
     </qresource>
 </RCC>
