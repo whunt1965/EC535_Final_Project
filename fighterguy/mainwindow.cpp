@@ -100,10 +100,11 @@ void MainWindow::on_FightButton_clicked()
 
 void MainWindow::on_leftarrow_clicked()
 {
+    if(characterSelect !=0){
     characterSelect--;
     characterSelect =abs(characterSelect);
     characterSelect = characterSelect % 4;
-
+    }
 
     changeCharacterImage();
 
@@ -111,8 +112,10 @@ void MainWindow::on_leftarrow_clicked()
 
 void MainWindow::on_rightArrow_clicked()
 {
+    if(characterSelect != 3){
     characterSelect++;
     characterSelect = characterSelect %4;
+    }
     changeCharacterImage();
 }
 
@@ -154,9 +157,11 @@ void MainWindow::on_mainMenuBtn_clicked()
 
 void MainWindow::on_leftarrow_2_clicked()
 {
+    if(characterSelectTwo != 0){
     characterSelectTwo--;
     characterSelectTwo =abs(characterSelectTwo);
     characterSelectTwo = characterSelectTwo % 4;
+    }
 
     changeCharacterImageTwo();
 
@@ -164,9 +169,11 @@ void MainWindow::on_leftarrow_2_clicked()
 
 void MainWindow::on_rightArrow_2_clicked()
 {
+    if(characterSelectTwo != 3){
     characterSelectTwo++;
     characterSelectTwo = characterSelectTwo %4;
     ui->progressBar->setValue(20);
+    }
     changeCharacterImageTwo();
 
 }
