@@ -23,35 +23,50 @@ public:
 
 private slots:
 
+    //Quit button for main menu
     void on_quitButton_clicked();
 
+    //New Game button for main menu
     void on_newGameButton_clicked();
 
+    //Starts a new game
     void on_FightButton_clicked();
 
+    //Left arrow for Player1 character select
     void on_leftarrow_clicked();
 
+    //Right arrow for Player1 character select
     void on_rightArrow_clicked();
 
+    //Updates image for Player1's character
     void changeCharacterImage();
 
+    //Start new game from game over screen
     void on_newGameBtn_clicked();
 
+    //exit button from game over screen
     void on_exitBtn_clicked();
 
+    //Navigate to main menu from fighter select screen
     void on_mainMenuBtn_clicked();
 
+    //left arrow for Player2 character select
     void on_leftarrow_2_clicked();
 
+    //right arrow for Player2 character select
     void on_rightArrow_2_clicked();
 
+    //Updates image for Player2's character
     void changeCharacterImageTwo();
 
-    void on_exitBtn_2_clicked();
-
+    //Button to navigate from main menu to instructions page
     void on_newGameButton_2_clicked();
 
+    //in-game quit button -- returns to main menu
     void on_quitButton_2_clicked();
+
+    //back button from instructions page to main menu
+    void on_instrucToMenubtn_clicked();
 
 private:
     Ui::MainWindow *ui;

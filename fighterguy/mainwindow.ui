@@ -786,7 +786,7 @@ p, li { white-space: pre-wrap; }
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="exitBtn_2">
+     <widget class="QPushButton" name="instrucToMenubtn">
       <property name="geometry">
        <rect>
         <x>180</x>

@@ -188,16 +188,18 @@ void MainWindow::changeCharacterImageTwo(){
     }
 }
 
-void MainWindow::on_exitBtn_2_clicked(){
-    ui->stackedWidget->setCurrentIndex(0);
-
-}
 
 void MainWindow::on_newGameButton_2_clicked(){
     ui->stackedWidget->setCurrentIndex(4);
 
 }
 
+//In-game Quit button
 void MainWindow::on_quitButton_2_clicked(){
     this->reset("No Winner");
+}
+
+//Back to menu button on instructions page
+void MainWindow::on_instrucToMenubtn_clicked(){
+    ui->stackedWidget->setCurrentIndex(0);
 }
