@@ -475,7 +475,7 @@
 
 QProgressBar::chunk {
 	background-color: rgb(218, 62, 76);
-    width: 20px;
+    width: 5px;
 }</string>
       </property>
       <property name="value">
@@ -505,7 +505,7 @@ QProgressBar::chunk {
 
 QProgressBar::chunk {
 	background-color: rgb(218, 62, 76);
-    width: 20px;
+    width: 5px;
 }</string>
       </property>
       <property name="value">

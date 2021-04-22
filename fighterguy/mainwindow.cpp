@@ -14,23 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
-
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-   // this->progressBar = progressBar;
-     ui->progressBar->setRange(0,20);
-     ui->progressBar_2->setRange(0,20);
-
-//    QGraphicsScene* scene = new QGraphicsScene();
-//    ui->graphicsView->setScene(scene);
-
-//    QPixmap mypix (":/assets/lifegaurd.png");
-//    Fighter* fighter = new Player1(1, "Guy", mypix);
-//    fighter->setOpponent(fighter);
-
-
-
+    ui->progressBar->setRange(0,20);
+    ui->progressBar_2->setRange(0,20);
 }
 
 MainWindow::~MainWindow()
