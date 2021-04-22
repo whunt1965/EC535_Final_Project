@@ -187,7 +187,7 @@
       <property name="font">
        <font>
         <family>Gill Sans</family>
-        <pointsize>12</pointsize>
+        <pointsize>9</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -281,7 +281,7 @@
       <property name="font">
        <font>
         <family>Gill Sans</family>
-        <pointsize>12</pointsize>
+        <pointsize>9</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -294,6 +294,9 @@
       </property>
       <property name="text">
        <string>Lifeguard Lenny</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -543,7 +546,7 @@ QProgressBar::chunk {
       <property name="font">
        <font>
         <family>Chalkboard SE</family>
-        <pointsize>44</pointsize>
+        <pointsize>24</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -556,6 +559,9 @@ QProgressBar::chunk {
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="winnerName">
@@ -570,7 +576,7 @@ QProgressBar::chunk {
       <property name="font">
        <font>
         <family>Chalkboard SE</family>
-        <pointsize>36</pointsize>
+        <pointsize>18</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>

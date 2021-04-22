@@ -24,5 +24,13 @@
         <file>assets/jimpunch.png</file>
         <file>assets/jimnormal.png</file>
         <file>assets/lgLenny.png</file>
+        <file>assets/karen.png</file>
+        <file>assets/karenblock.png</file>
+        <file>assets/karenkick.png</file>
+        <file>assets/karenpunch.png</file>
+        <file>assets/surfer.png</file>
+        <file>assets/surferblock.png</file>
+        <file>assets/surferkick.png</file>
+        <file>assets/surferpunch.png</file>
     </qresource>
 </RCC>

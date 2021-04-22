@@ -68,23 +68,31 @@ void MainWindow::on_FightButton_clicked()
 {
 
     if(characterSelect ==0){
-
         p1Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-
-//    QGraphicsPixmapItem* item = ui->graphicsView->scene()->addPixmap(mypix);
-//    item->setPixmap(mypix.scaled(200,400,Qt::KeepAspectRatio));
        }
-    else{
-
+    if(characterSelect ==1){
         p1Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
-
      }
+    if(characterSelect ==2){
+        p1Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png")};
+     }
+    if(characterSelect ==3){
+        p1Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png")};
+     }
+
 
     if(characterSelectTwo ==0){
         p2Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-    }else{
-        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png")};
-    }
+       }
+    if(characterSelectTwo ==1){
+        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png")};
+     }
+    if(characterSelectTwo ==2){
+        p2Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png")};
+     }
+    if(characterSelectTwo ==3){
+        p2Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png")};
+     }
 
     this->game = new Game(ui->graphicsView, p1Pics, p2Pics);
     ui->stackedWidget->setCurrentIndex(2);
@@ -94,7 +102,7 @@ void MainWindow::on_leftarrow_clicked()
 {
     characterSelect--;
     characterSelect =abs(characterSelect);
-    characterSelect = characterSelect % 2;
+    characterSelect = characterSelect % 4;
 
 
     changeCharacterImage();
@@ -104,7 +112,7 @@ void MainWindow::on_leftarrow_clicked()
 void MainWindow::on_rightArrow_clicked()
 {
     characterSelect++;
-    characterSelect = characterSelect %2;
+    characterSelect = characterSelect %4;
     changeCharacterImage();
 }
 
@@ -118,7 +126,14 @@ void MainWindow::changeCharacterImage(){
     else if(characterSelect ==1){
         ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
         ui->playerOneSelect->setText(QString("Food Truck Jim"));
-
+    }
+    else if(characterSelect ==2){
+        ui->characterImg->setStyleSheet("image:url(:/assets/surfer.png);");
+        ui->playerOneSelect->setText(QString("Surfer Syd"));
+    }
+    else{
+        ui->characterImg->setStyleSheet("image:url(:/assets/karen.png);");
+        ui->playerOneSelect->setText(QString("Karen"));
     }
 }
 
@@ -141,7 +156,7 @@ void MainWindow::on_leftarrow_2_clicked()
 {
     characterSelectTwo--;
     characterSelectTwo =abs(characterSelectTwo);
-    characterSelectTwo = characterSelectTwo % 2;
+    characterSelectTwo = characterSelectTwo % 4;
 
     changeCharacterImageTwo();
 
@@ -150,7 +165,7 @@ void MainWindow::on_leftarrow_2_clicked()
 void MainWindow::on_rightArrow_2_clicked()
 {
     characterSelectTwo++;
-    characterSelectTwo = characterSelectTwo %2;
+    characterSelectTwo = characterSelectTwo %4;
     ui->progressBar->setValue(20);
     changeCharacterImageTwo();
 
@@ -166,6 +181,13 @@ void MainWindow::changeCharacterImageTwo(){
     else if(characterSelectTwo ==1){
         ui->characterImg_2->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
-
+    }
+    else if(characterSelectTwo ==2){
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/surfer.png);");
+        ui->playerTwoSelect->setText(QString("Surfer Syd"));
+    }
+    else{
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/karen.png);");
+        ui->playerTwoSelect->setText(QString("Karen"));
     }
 }
