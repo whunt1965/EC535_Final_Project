@@ -14,23 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
-
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-   // this->progressBar = progressBar;
-     ui->progressBar->setRange(0,20);
-     ui->progressBar_2->setRange(0,20);
-
-//    QGraphicsScene* scene = new QGraphicsScene();
-//    ui->graphicsView->setScene(scene);
-
-//    QPixmap mypix (":/assets/lifegaurd.png");
-//    Fighter* fighter = new Player1(1, "Guy", mypix);
-//    fighter->setOpponent(fighter);
-
-
-
+    ui->progressBar->setRange(0,20);
+    ui->progressBar_2->setRange(0,20);
 }
 
 MainWindow::~MainWindow()
@@ -100,10 +88,10 @@ void MainWindow::on_FightButton_clicked()
 
 void MainWindow::on_leftarrow_clicked()
 {
-    if(characterSelect !=0){
-    characterSelect--;
-    characterSelect =abs(characterSelect);
-    characterSelect = characterSelect % 4;
+    if(characterSelect == 0){
+        characterSelect = 3;
+    }else{
+       characterSelect--;
     }
 
     changeCharacterImage();
@@ -112,9 +100,10 @@ void MainWindow::on_leftarrow_clicked()
 
 void MainWindow::on_rightArrow_clicked()
 {
-    if(characterSelect != 3){
-    characterSelect++;
-    characterSelect = characterSelect %4;
+    if(characterSelect == 3){
+        characterSelect = 0;
+    }else{
+       characterSelect++;
     }
     changeCharacterImage();
 }
@@ -157,10 +146,10 @@ void MainWindow::on_mainMenuBtn_clicked()
 
 void MainWindow::on_leftarrow_2_clicked()
 {
-    if(characterSelectTwo != 0){
-    characterSelectTwo--;
-    characterSelectTwo =abs(characterSelectTwo);
-    characterSelectTwo = characterSelectTwo % 4;
+    if(characterSelectTwo == 0){
+        characterSelectTwo = 3;
+    }else{
+       characterSelectTwo--;
     }
 
     changeCharacterImageTwo();
@@ -169,10 +158,10 @@ void MainWindow::on_leftarrow_2_clicked()
 
 void MainWindow::on_rightArrow_2_clicked()
 {
-    if(characterSelectTwo != 3){
-    characterSelectTwo++;
-    characterSelectTwo = characterSelectTwo %4;
-    ui->progressBar->setValue(20);
+    if(characterSelectTwo == 3){
+        characterSelectTwo = 0;
+    }else{
+       characterSelectTwo++;
     }
     changeCharacterImageTwo();
 
@@ -197,4 +186,20 @@ void MainWindow::changeCharacterImageTwo(){
         ui->characterImg_2->setStyleSheet("image:url(:/assets/karen.png);");
         ui->playerTwoSelect->setText(QString("Karen"));
     }
+}
+
+
+void MainWindow::on_newGameButton_2_clicked(){
+    ui->stackedWidget->setCurrentIndex(4);
+
+}
+
+//In-game Quit button
+void MainWindow::on_quitButton_2_clicked(){
+    this->reset("No Winner");
+}
+
+//Back to menu button on instructions page
+void MainWindow::on_instrucToMenubtn_clicked(){
+    ui->stackedWidget->setCurrentIndex(0);
 }

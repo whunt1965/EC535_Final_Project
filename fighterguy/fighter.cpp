@@ -48,17 +48,19 @@ void Fighter::block(){
 
 //set blocking state to false
 void Fighter::unblock(){
-    setPixmap(pics[0].scaled(120,240,Qt::KeepAspectRatio));
+    reset();
     this->blocking = false;
 }
 
 //move a fighter in -x direction
 void Fighter::moveLeft(){
+    reset();
     setPos(x()-16, y());
 }
 
 //move a fighter in +x direction
 void Fighter::moveRight(){
+    reset();
     setPos(x()+16, y());
 }
 
@@ -68,6 +70,7 @@ void Fighter::jump(){
     if(timer == nullptr || timer->state() == QTimeLine::NotRunning){
         delete timer;
         delete animationUp;
+        reset();
         timer = new QTimeLine(500);
         timer->setFrameRange(0, 100);
         animationUp = new QGraphicsItemAnimation;

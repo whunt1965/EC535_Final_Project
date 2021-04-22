@@ -40,7 +40,7 @@ Game::Game(QGraphicsView* view, const QVector<QPixmap> &player1pics, const QVect
     //Initialize timer
     QGraphicsTextItem* gameTimer = new QGraphicsTextItem();
     timer = new MyTimer(gameTimer, this->controller);
-    gameTimer->setPos(240, 20);
+    gameTimer->setPos(220, 20);
     scene->addItem(gameTimer);
 
 }
