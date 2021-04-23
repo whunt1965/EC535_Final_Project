@@ -6,8 +6,8 @@
 #include <QLabel>
 #include "fighter.h"
 
-int characterSelect = 1;
-int characterSelectTwo = 1;
+int characterSelect = 0;
+int characterSelectTwo = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -114,25 +114,25 @@ void MainWindow::on_rightArrow_clicked()
 void MainWindow::changeCharacterImage(){
 
     if(characterSelect ==1){
-        qDebug() << "Character 1" << characterSelect;
-        ui->characterImg->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
-         ui->playerOneSelect->setText(QString("LifeGuard Lenny"));
+        ui->characterImg->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
+        ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
+
     }
 
     else if(characterSelect ==2){
-         qDebug() << "Character 2" << characterSelect;
-         ui->characterImg->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
-         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
-    }
-     else if(characterSelect ==3){
-         qDebug() << "Character 3" << characterSelect;
         ui->characterImg->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerOneSelect->setText(QString("Surfer Syd"));
+
     }
-    else{
-         qDebug() << "Character 0" << characterSelect;
+     else if(characterSelect ==3){
         ui->characterImg->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerOneSelect->setText(QString("Karen"));
+
+    }
+    else{
+        ui->characterImg->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
+         ui->playerOneSelect->setText(QString("LifeGuard Lenny"));
+
     }
 }
 
@@ -177,25 +177,24 @@ void MainWindow::on_rightArrow_2_clicked()
 void MainWindow::changeCharacterImageTwo(){
 
     if(characterSelectTwo ==1){
-        qDebug() << "CharacterTwo 1" << characterSelectTwo;
-        ui->characterImg_2->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
-        ui->playerTwoSelect->setText(QString("LifeGuard Lenny"));
-    }
 
-     else if(characterSelectTwo ==2){
-         qDebug() << "CharacterTwo 2" << characterSelectTwo;
         ui->characterImg_2->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
     }
-     else if(characterSelectTwo ==3){
-         qDebug() << "CharacterTwo 3" << characterSelectTwo;
+
+     else if(characterSelectTwo ==2){
         ui->characterImg_2->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerTwoSelect->setText(QString("Surfer Syd"));
     }
-    else{
-         qDebug() << "CharacterTwo 0" << characterSelectTwo;
+     else if(characterSelectTwo ==3){
+
         ui->characterImg_2->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerTwoSelect->setText(QString("Karen"));
+    }
+    else{
+         ui->characterImg_2->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
+         ui->playerTwoSelect->setText(QString("LifeGuard Lenny"));
+
     }
 }
 

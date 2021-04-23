@@ -166,7 +166,7 @@
      <widget class="QPushButton" name="rightArrow">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>190</x>
         <y>240</y>
         <width>21</width>
         <height>21</height>
@@ -182,7 +182,7 @@
      <widget class="QPushButton" name="leftarrow">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>40</x>
         <y>240</y>
         <width>21</width>
         <height>21</height>
@@ -198,9 +198,9 @@
      <widget class="QLabel" name="playerOneSelect">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>60</x>
         <y>240</y>
-        <width>91</width>
+        <width>131</width>
         <height>21</height>
        </rect>
       </property>
@@ -276,7 +276,7 @@
      <widget class="QPushButton" name="leftarrow_2">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>290</x>
         <y>240</y>
         <width>21</width>
         <height>21</height>
@@ -292,9 +292,9 @@
      <widget class="QLabel" name="playerTwoSelect">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>310</x>
         <y>240</y>
-        <width>81</width>
+        <width>121</width>
         <height>21</height>
        </rect>
       </property>
@@ -325,7 +325,7 @@
      <widget class="QPushButton" name="rightArrow_2">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>430</x>
         <y>240</y>
         <width>21</width>
         <height>21</height>
@@ -574,9 +574,9 @@ QProgressBar::chunk {
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>70</x>
         <y>40</y>
-        <width>201</width>
+        <width>361</width>
         <height>71</height>
        </rect>
       </property>
@@ -604,9 +604,9 @@ QProgressBar::chunk {
      <widget class="QLabel" name="winnerName">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>50</x>
         <y>100</y>
-        <width>251</width>
+        <width>391</width>
         <height>51</height>
        </rect>
       </property>
@@ -759,9 +759,9 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>40</x>
         <y>0</y>
-        <width>201</width>
+        <width>401</width>
         <height>71</height>
        </rect>
       </property>
