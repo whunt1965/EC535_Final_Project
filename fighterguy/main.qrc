@@ -2,8 +2,6 @@
     <qresource prefix="/">
         <file>assets/Scene.png</file>
         <file>assets/beach.png</file>
-        <file>assets/lifegaurd.png</file>
-        <file>assets/foodtruckJim.png</file>
         <file>assets/beachBrawlLogo.png</file>
         <file>assets/Exit_Btn.png</file>
         <file>assets/Fight_Btn.png</file>
@@ -16,25 +14,28 @@
         <file>assets/Player1Text.png</file>
         <file>assets/Player2Text.png</file>
         <file>assets/beachsmall.png</file>
-        <file>assets/lgblock.png</file>
-        <file>assets/lgkick.png</file>
-        <file>assets/lgpunch.png</file>
-        <file>assets/jimblock.png</file>
-        <file>assets/jimkick.png</file>
-        <file>assets/jimpunch.png</file>
-        <file>assets/jimnormal.png</file>
-        <file>assets/lgLenny.png</file>
-        <file>assets/karen.png</file>
-        <file>assets/karenblock.png</file>
-        <file>assets/karenkick.png</file>
-        <file>assets/karenpunch.png</file>
-        <file>assets/surfer.png</file>
-        <file>assets/surferblock.png</file>
-        <file>assets/surferkick.png</file>
-        <file>assets/surferpunch.png</file>
-        <file>assets/jimflinch.png</file>
-        <file>assets/karenflinch.png</file>
-        <file>assets/lgflinch.png</file>
-        <file>assets/surferflinch.png</file>
+        <file>assets/lgLenny/lgkick.png</file>
+        <file>assets/karen/karen.png</file>
+        <file>assets/karen/karenblock.png</file>
+        <file>assets/karen/karenflinch.png</file>
+        <file>assets/karen/karenkick.png</file>
+        <file>assets/karen/karenpunch.png</file>
+        <file>assets/lgLenny/lgblock.png</file>
+        <file>assets/lgLenny/lgflinch.png</file>
+        <file>assets/lgLenny/lgLenny.png</file>
+        <file>assets/lgLenny/lgpunch.png</file>
+        <file>assets/lgLenny/lifegaurd.png</file>
+        <file>assets/surfer/surfer.png</file>
+        <file>assets/surfer/surferblock.png</file>
+        <file>assets/surfer/surferflinch.png</file>
+        <file>assets/surfer/surferkick.png</file>
+        <file>assets/surfer/surferpunch.png</file>
+        <file>assets/foodTruckJim/foodtruckJim.png</file>
+        <file>assets/foodTruckJim/jimblock.png</file>
+        <file>assets/foodTruckJim/jimflinch.png</file>
+        <file>assets/foodTruckJim/jimkick.png</file>
+        <file>assets/foodTruckJim/jimnormal.png</file>
+        <file>assets/foodTruckJim/jimpunch.png</file>
+        <file>assets/instructions_Btn.png</file>
     </qresource>
 </RCC>
