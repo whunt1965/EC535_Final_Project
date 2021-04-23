@@ -6,8 +6,8 @@
 #include <QLabel>
 #include "fighter.h"
 
-int characterSelect = 0;
-int characterSelectTwo = 0;
+int characterSelect = 1;
+int characterSelectTwo = 1;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
+
+    changeCharacterImage();
+    changeCharacterImageTwo();
 
     ui->progressBar->setRange(0,20);
     ui->progressBar_2->setRange(0,20);
@@ -110,20 +113,24 @@ void MainWindow::on_rightArrow_clicked()
 
 void MainWindow::changeCharacterImage(){
 
-    if(characterSelect ==0){
+    if(characterSelect ==1){
+        qDebug() << "Character 1" << characterSelect;
         ui->characterImg->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
          ui->playerOneSelect->setText(QString("LifeGuard Lenny"));
     }
 
-     if(characterSelect ==1){
-        ui->characterImg->setStyleSheet("image:url(:/assets/FoodTruckJim/foodtruckJim.png);");
-        ui->playerOneSelect->setText(QString("Food Truck Jim"));
+    else if(characterSelect ==2){
+         qDebug() << "Character 2" << characterSelect;
+         ui->characterImg->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
+         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
     }
-     if(characterSelect ==2){
+     else if(characterSelect ==3){
+         qDebug() << "Character 3" << characterSelect;
         ui->characterImg->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerOneSelect->setText(QString("Surfer Syd"));
     }
     else{
+         qDebug() << "Character 0" << characterSelect;
         ui->characterImg->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerOneSelect->setText(QString("Karen"));
     }
@@ -169,20 +176,24 @@ void MainWindow::on_rightArrow_2_clicked()
 
 void MainWindow::changeCharacterImageTwo(){
 
-    if(characterSelectTwo ==0){
+    if(characterSelectTwo ==1){
+        qDebug() << "CharacterTwo 1" << characterSelectTwo;
         ui->characterImg_2->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
         ui->playerTwoSelect->setText(QString("LifeGuard Lenny"));
     }
 
-     if(characterSelectTwo ==1){
+     else if(characterSelectTwo ==2){
+         qDebug() << "CharacterTwo 2" << characterSelectTwo;
         ui->characterImg_2->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
     }
-     if(characterSelectTwo ==2){
+     else if(characterSelectTwo ==3){
+         qDebug() << "CharacterTwo 3" << characterSelectTwo;
         ui->characterImg_2->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerTwoSelect->setText(QString("Surfer Syd"));
     }
     else{
+         qDebug() << "CharacterTwo 0" << characterSelectTwo;
         ui->characterImg_2->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerTwoSelect->setText(QString("Karen"));
     }
