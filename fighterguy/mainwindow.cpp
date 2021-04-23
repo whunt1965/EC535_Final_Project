@@ -56,30 +56,30 @@ void MainWindow::on_FightButton_clicked()
 {
 
     if(characterSelect ==0){
-        p1Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png"), QPixmap(":/assets/lgflinch.png")};
+        p1Pics= {QPixmap(":/assets/lgLenny/lgLenny.png"), QPixmap(":/assets/lgLenny/lgkick.png"), QPixmap(":/assets/lgLenny/lgpunch.png"), QPixmap(":/assets/lgLenny/lgblock.png"), QPixmap(":/assets/lgLenny/lgflinch.png")};
        }
     if(characterSelect ==1){
-        p1Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png"), QPixmap(":/assets/jimflinch.png")};
+        p1Pics= {QPixmap(":/assets/foodTruckJim/jimnormal.png"), QPixmap(":/assets/foodTruckJim/jimkick.png"),QPixmap(":/assets/foodTruckJim/jimpunch.png"),QPixmap(":/assets/foodTruckJim/jimblock.png"), QPixmap(":/assets/foodTruckJim/jimflinch.png")};
      }
     if(characterSelect ==2){
-        p1Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png"), QPixmap(":/assets/surferflinch.png")};
+        p1Pics= {QPixmap(":/assets/surfer/surfer.png"), QPixmap(":/assets/surfer/surferkick.png"),QPixmap(":/assets/surfer/surferpunch.png"),QPixmap(":/assets/surfer/surferblock.png"), QPixmap(":/assets/surfer/surferflinch.png")};
      }
     if(characterSelect ==3){
-        p1Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png"),QPixmap(":/assets/karenflinch.png")};
+        p1Pics= {QPixmap(":/assets/karen/karen.png"), QPixmap(":/assets/karen/karenkick.png"),QPixmap(":/assets/karen/karenpunch.png"),QPixmap(":/assets/karen/karenblock.png"),QPixmap(":/assets/karen/karenflinch.png")};
      }
 
 
     if(characterSelectTwo ==0){
-        p2Pics= {QPixmap(":/assets/lgLenny.png"), QPixmap(":/assets/lgkick.png"), QPixmap(":/assets/lgpunch.png"), QPixmap(":/assets/lgblock.png"), QPixmap(":/assets/lgflinch.png")};
+        p2Pics= {QPixmap(":/assets/lgLenny/lgLenny.png"), QPixmap(":/assets/lgLenny/lgkick.png"), QPixmap(":/assets/lgLenny/lgpunch.png"), QPixmap(":/assets/lgLenny/lgblock.png"), QPixmap(":/assets/lgLenny/lgflinch.png")};
        }
     if(characterSelectTwo ==1){
-        p2Pics= {QPixmap(":/assets/jimnormal.png"), QPixmap(":/assets/jimkick.png"),QPixmap(":/assets/jimpunch.png"),QPixmap(":/assets/jimblock.png"), QPixmap(":/assets/jimflinch.png")};
+        p2Pics= {QPixmap(":/assets/foodTruckJim/jimnormal.png"), QPixmap(":/assets/foodTruckJim/jimkick.png"),QPixmap(":/assets/foodTruckJim/jimpunch.png"),QPixmap(":/assets/foodTruckJim/jimblock.png"), QPixmap(":/assets/foodTruckJim/jimflinch.png")};
      }
     if(characterSelectTwo ==2){
-        p2Pics= {QPixmap(":/assets/surfer.png"), QPixmap(":/assets/surferkick.png"),QPixmap(":/assets/surferpunch.png"),QPixmap(":/assets/surferblock.png"), QPixmap(":/assets/surferflinch.png")};
+        p2Pics= {QPixmap(":/assets/surfer/surfer.png"), QPixmap(":/assets/surfer/surferkick.png"),QPixmap(":/assets/surfer/surferpunch.png"),QPixmap(":/assets/surfer/surferblock.png"), QPixmap(":/assets/surfer/surferflinch.png")};
      }
     if(characterSelectTwo ==3){
-        p2Pics= {QPixmap(":/assets/karen.png"), QPixmap(":/assets/karenkick.png"),QPixmap(":/assets/karenpunch.png"),QPixmap(":/assets/karenblock.png"), QPixmap(":/assets/karenflinch.png")};
+        p2Pics= {QPixmap(":/assets/karen/karen.png"), QPixmap(":/assets/karen/karenkick.png"),QPixmap(":/assets/karen/karenpunch.png"),QPixmap(":/assets/karen/karenblock.png"), QPixmap(":/assets/karen/karenflinch.png")};
      }
 
     this->game = new Game(ui->graphicsView, p1Pics, p2Pics);
@@ -111,20 +111,20 @@ void MainWindow::on_rightArrow_clicked()
 void MainWindow::changeCharacterImage(){
 
     if(characterSelect ==0){
-        ui->characterImg->setStyleSheet("image:url(:/assets/lifegaurd.png);");
+        ui->characterImg->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
          ui->playerOneSelect->setText(QString("LifeGuard Lenny"));
     }
 
-    else if(characterSelect ==1){
-        ui->characterImg->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
+     if(characterSelect ==1){
+        ui->characterImg->setStyleSheet("image:url(:/assets/FoodTruckJim/foodtruckJim.png);");
         ui->playerOneSelect->setText(QString("Food Truck Jim"));
     }
-    else if(characterSelect ==2){
-        ui->characterImg->setStyleSheet("image:url(:/assets/surfer.png);");
+     if(characterSelect ==2){
+        ui->characterImg->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerOneSelect->setText(QString("Surfer Syd"));
     }
     else{
-        ui->characterImg->setStyleSheet("image:url(:/assets/karen.png);");
+        ui->characterImg->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerOneSelect->setText(QString("Karen"));
     }
 }
@@ -170,20 +170,20 @@ void MainWindow::on_rightArrow_2_clicked()
 void MainWindow::changeCharacterImageTwo(){
 
     if(characterSelectTwo ==0){
-        ui->characterImg_2->setStyleSheet("image:url(:/assets/lifegaurd.png);");
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/lgLenny/lifegaurd.png);");
         ui->playerTwoSelect->setText(QString("LifeGuard Lenny"));
     }
 
-    else if(characterSelectTwo ==1){
-        ui->characterImg_2->setStyleSheet("image:url(:/assets/foodtruckJim.png);");
+     if(characterSelectTwo ==1){
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
         ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
     }
-    else if(characterSelectTwo ==2){
-        ui->characterImg_2->setStyleSheet("image:url(:/assets/surfer.png);");
+     if(characterSelectTwo ==2){
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/surfer/surfer.png);");
         ui->playerTwoSelect->setText(QString("Surfer Syd"));
     }
     else{
-        ui->characterImg_2->setStyleSheet("image:url(:/assets/karen.png);");
+        ui->characterImg_2->setStyleSheet("image:url(:/assets/karen/karen.png);");
         ui->playerTwoSelect->setText(QString("Karen"));
     }
 }
