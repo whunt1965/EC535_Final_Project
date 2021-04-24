@@ -11,6 +11,7 @@ Controller::Controller(QGraphicsScene* scene, Fighter *P1, Fighter *P2)
     : scene(scene),
       Player1(P1),
       Player2(P2){
+        w->setPauseLabel(false);
         scene->installEventFilter(this);
         update();
 
@@ -22,6 +23,7 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
     //Handle pause event
     if(event->key()==Qt::Key_Space){
         w->game->togglePause();
+        w->setPauseLabel(w->game->isPaused());
         return;
     }
 

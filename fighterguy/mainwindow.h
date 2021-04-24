@@ -16,9 +16,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void reset(QString name);
+    void reset(QString name);//Ends game and displays winner
 
-    void updateProgress(int p1Score, int p2Score);
+    void updateProgress(int p1Score, int p2Score);//Updates progress bars
+
+    void setPauseLabel(bool isVisible);//Toggle visibility of pause label for game
     Game* game = nullptr;
 
 private slots:
@@ -67,6 +69,7 @@ private slots:
 
     //back button from instructions page to main menu
     void on_instrucToMenubtn_clicked();
+
 
 private:
     Ui::MainWindow *ui;

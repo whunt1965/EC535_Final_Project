@@ -41,8 +41,10 @@ void MainWindow::updateProgress(int p1Score, int p2Score){
     ui->progressBar_2->setValue(p2Score);
 }
 
-
-
+//Toggle viisbility of pause lable on GamePlay stacked widget
+void MainWindow::setPauseLabel(bool isVisible){
+    ui->pauseLabel->setVisible(isVisible);
+}
 
 void MainWindow::on_quitButton_clicked()
 {
@@ -213,3 +215,4 @@ void MainWindow::on_quitButton_2_clicked(){
 void MainWindow::on_instrucToMenubtn_clicked(){
     ui->stackedWidget->setCurrentIndex(0);
 }
+
