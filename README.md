@@ -6,6 +6,22 @@
 This project provides an action-packed, 2-player fighting game compatibleto run on the BeagleBone Black developed using Qt, and C++. At game start, players can navigate through the game menu, choose their players, and start a new match. Once the battle begins, players
 will be able to make their fighter move, punch, kick, block, and jump. After 90 seconds, or once a player's health reaches zero, the game ends and a winner is declared!
 
+### Build Instructions
+To run locally, clone this repo and  [download QtCreator](https://www.qt.io/download). After Opening QtCreator, choose 'Open' and select the fighterguy folder from the cloned repository. To run, click the "Build" and then "Run" buttons.
+
+To run the BeagleBone Black, you must use Qmake and cross compile the program with the appropriate tool chain. After transferring the executable to the BeagleBone, simply run with "./fighterguy". 
+
+### Game Overview
+To begin, run the application, select "New Game", and then choose your characters.
+
+Each Player begins with 20 health points and the game timer is set to 90 seconds.
+
+Within the game, a player can punch another opponent by moving directly adjacent to the opponent and pressing the punch key. If the other player is not blocking, their health will be decremented by 1 health point. If they are blocking (or have jumped), no health points are deducted. 
+
+A player can kick another opponent by moving within 1 step of the their opponent (ie, one more step and they would be directly adjacent) and pressing the kick key. If the other player is not blocking, their health will be decremented by 2 health points. If they are blockin 1 health point are deducted.If the other player is jumping, no health points are deducted.
+
+The game ends when either one player is out of health points or the game timer is up!
+
 ### Controls
 ----
 Each player can move left or right, jump, block, kick and punch. 
@@ -19,7 +35,7 @@ Each player can move left or right, jump, block, kick and punch.
 |Block       |S           |K           |
 |Kick        |C           |N           |
 |Punch       |X           |M           |
-
+|Pause       |Spacebar    |Spacebar        |
 
 
 
