@@ -1,7 +1,6 @@
 #include "controller.h"
 #include "mainwindow.h"
 #include <QGraphicsTextItem>
-#include <QDebug>
 
 
 extern MainWindow* w;//reference to Mainwindow for callbacks
@@ -43,7 +42,7 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
             break;
         }
 
-        case Qt::Key_D:{//Player1 move right - D key -- cannot move past opponent --need to tweak
+        case Qt::Key_D:{//Player1 move right - D key -- cannot move past opponent
             if(Player1->pos().x() + 210 <= Player1->getOpponent()->pos().x()){
                 Player1->moveRight();
             }
@@ -78,7 +77,7 @@ void Controller::handleKeyPressEvent(QKeyEvent *event){
             break;
         }
 
-        case Qt::Key_L:{//Player2 move right - L key -- cannot move out of scene --need to tweak
+        case Qt::Key_L:{//Player2 move right - L key -- cannot move out of scene
             if(Player2->pos().x() + 200 < 800){
                 Player2->moveRight();
             }

@@ -2,14 +2,12 @@
 #include<QtMath>
 
 //default constructor
-//need to add a location...
 Fighter::Fighter()
     : name("default"),
       health(20),
       blocking(false){}
 
 //parameterized constructor
-//need to add a location...
 Fighter::Fighter(const QString &fname, const QVector<QPixmap>& pics)
     : name(fname),
       pics(pics),
