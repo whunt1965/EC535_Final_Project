@@ -563,12 +563,43 @@ QProgressBar::chunk {
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="pauseLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>391</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chalkboard SE</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(183, 41, 56);</string>
+      </property>
+      <property name="text">
+       <string>Game Paused</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
      <zorder>graphicsView</zorder>
      <zorder>label_6</zorder>
      <zorder>label_7</zorder>
      <zorder>progressBar</zorder>
      <zorder>progressBar_2</zorder>
      <zorder>quitButton_2</zorder>
+     <zorder>pauseLabel</zorder>
     </widget>
     <widget class="QWidget" name="page_3">
      <widget class="QLabel" name="label_2">
