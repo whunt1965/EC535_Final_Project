@@ -7,11 +7,13 @@ This project provides an action-packed, 2-player fighting game compatibleto run 
 will be able to make their fighter move, punch, kick, block, and jump. After 90 seconds, or once a player's health reaches zero, the game ends and a winner is declared!
 
 ### Build Instructions
+---
 To run locally, clone this repo and  [download QtCreator](https://www.qt.io/download). After Opening QtCreator, choose 'Open' and select the fighterguy folder from the cloned repository. To run, click the "Build" and then "Run" buttons.
 
 To run the BeagleBone Black, you must use Qmake and cross compile the program with the appropriate tool chain. After transferring the executable to the BeagleBone, simply run with "./fighterguy". 
 
 ### Game Overview
+---
 To begin, run the application, select "New Game", and then choose your characters.
 
 Each Player begins with 20 health points and the game timer is set to 90 seconds.
