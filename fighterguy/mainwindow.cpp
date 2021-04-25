@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include <QGraphicsView>
 #include <QGraphicsItem>
-#include <QDebug>
 #include <QLabel>
 #include "fighter.h"
 
@@ -117,7 +116,7 @@ void MainWindow::changeCharacterImage(){
 
     if(characterSelect ==1){
         ui->characterImg->setStyleSheet("image:url(:/assets/foodTruckJim/foodtruckJim.png);");
-        ui->playerTwoSelect->setText(QString("FoodTruck Jim"));
+        ui->playerOneSelect->setText(QString("FoodTruck Jim"));
 
     }
 
