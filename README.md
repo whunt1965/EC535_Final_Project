@@ -1,10 +1,74 @@
 ![beachBrawlLogo](https://user-images.githubusercontent.com/56164075/115942623-22fdf980-a479-11eb-8b8b-97b2b09770df.png)
-### Ken Krebs and Wiley Hunt
+<br />
+<p align="center">
+  <p align="center">
+    Ken Krebs and Wiley Hunt
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+  </p>
+</p>
 
-### Introduction
----
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#gamelogic">Game Logic</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+
 This project provides an action-packed, 2-player fighting game compatibleto run on the BeagleBone Black developed using Qt, and C++. At game start, players can navigate through the game menu, choose their players, and start a new match. Once the battle begins, players
 will be able to make their fighter move, punch, kick, block, and jump. After 90 seconds, or once a player's health reaches zero, the game ends and a winner is declared!
+
+### Built With
+
+* [Qt Framework]()
+* [C++]()
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+  
+### Installation
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
 
 ### Build Instructions
 ---
@@ -37,10 +101,19 @@ Each player can move left or right, jump, block, kick and punch.
 |Block       |S           |K           |
 |Kick        |C           |N           |
 |Punch       |X           |M           |
-|Pause       |Spacebar    |Spacebar        |
+|Pause       |Spacebar    |Spacebar    |
 
 
 
 
 
 ### Game Logic and Architecture
+
+
+
+
+
+
+
+
+
