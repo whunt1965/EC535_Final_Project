@@ -42,8 +42,8 @@ will be able to make their fighter move, punch, kick, block, and jump. After 90 
 
 ### Built With
 
-* [Qt Framework]()
-* [C++]()
+* [Qt Framework](https://www.qt.io/download)
+* [C++](https://www.cplusplus.com/)
 
 
 <!-- GETTING STARTED -->
@@ -52,32 +52,27 @@ will be able to make their fighter move, punch, kick, block, and jump. After 90 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
+To run on a local machine:
+* Qt Widget Toolkit
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To deploy on a BeagleBone Black:
+* BeagleBone Black
+* BeagleBone Black compatible LCD touchscreen 
+* USB Keyboard
+
   
 ### Installation
-
+[download QtCreator](https://www.qt.io/download)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-### Build Instructions
----
-To run locally, clone this repo and  [download QtCreator](https://www.qt.io/download). After Opening QtCreator, choose 'Open' and select the fighterguy folder from the cloned repository. To run, click the "Build" and then "Run" buttons.
+### Opening and Compiling
+To run locally, clone this repo and open the project using QtCreator, choose 'Open' and select the fighterguy folder from the cloned repository. To run, click the "Build" and then "Run" buttons.
 
 To run the BeagleBone Black, you must use Qmake and cross compile the program with the appropriate tool chain. After transferring the executable to the BeagleBone, simply run with "./fighterguy". 
 
 ### Game Overview
----
 To begin, run the application, select "New Game", and then choose your characters.
 
 Each Player begins with 20 health points and the game timer is set to 90 seconds.
@@ -89,7 +84,6 @@ A player can kick another opponent by moving within 1 step of the their opponent
 The game ends when either one player is out of health points or the game timer is up!
 
 ### Controls
-----
 Each player can move left or right, jump, block, kick and punch. 
 
 
@@ -102,17 +96,6 @@ Each player can move left or right, jump, block, kick and punch.
 |Kick        |C           |N           |
 |Punch       |X           |M           |
 |Pause       |Spacebar    |Spacebar    |
-
-
-
-
-
-### Game Logic and Architecture
-
-
-
-
-
 
 
 
