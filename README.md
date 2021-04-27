@@ -68,7 +68,7 @@ To deploy on a BeagleBone Black:
 ### Opening and Compiling
 To run locally, clone this repo and open the project using QtCreator, choose 'Open' and select the fighterguy folder from the cloned repository. To run, click the "Build" and then "Run" buttons.
 
-To run the BeagleBone Black, you must use Qmake and cross compile the program with the appropriate tool chain. After transferring the executable to the BeagleBone, simply run with "./fighterguy". 
+To run the BeagleBone Black, you must use Qmake and cross compile the program (be sure to copy over the entire fighterguy directory as the assets are included within it) with the appropriate tool chain (this will make an executable named "fighterguy"). After transferring the executable to the BeagleBone, simply run with "./fighterguy". 
 
 ### Game Overview
 To begin, run the application, select "New Game", and then choose your characters.
