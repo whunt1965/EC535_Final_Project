@@ -75,9 +75,9 @@ To begin, run the application, select "New Game", and then choose your character
 
 Each Player begins with 20 health points and the game timer is set to 90 seconds.
 
-Within the game, a player can punch another opponent by moving directly adjacent to the opponent and pressing the punch key. If the other player is not blocking, their health will be decremented by 1 health point. If they are blocking (or have jumped), no health points are deducted. 
+Within the game, a player can punch another opponent by moving directly within 1 step of their opponent (ie, one more step and they would be directly adjacent) and pressing the punch key. If the other player is not blocking, their health will be decremented by 1 health point. If they are blocking (or have jumped), no health points are deducted. 
 
-A player can kick another opponent by moving within 1 step of the their opponent (ie, one more step and they would be directly adjacent) and pressing the kick key. If the other player is not blocking, their health will be decremented by 2 health points. If they are blockin 1 health point are deducted.If the other player is jumping, no health points are deducted.
+A player can kick another opponent by moving within 1 step of the their opponent and pressing the kick key. If the other player is not blocking, their health will be decremented by 2 health points. If they are blockin 1 health point are deducted.If the other player is jumping, no health points are deducted.
 
 The game ends when either one player is out of health points or the game timer is up!
 
